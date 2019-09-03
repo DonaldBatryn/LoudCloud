@@ -1,3 +1,59 @@
 // Place all the styles related to the api::session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.logo {
+    width: 510px;
+    height: 150px;
+    background-color: orangered;
+    margin: auto;
+    color: bisque;
+    border-radius: 5px;
+    padding: 5px 5px 5px 18px;
+    font-size: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+header > div {
+   float: right;
+    display: flex;
+}
+
+.btn {
+    width: 400px;
+    height: 50px;
+    background-color: orangered;
+    margin: 7px;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: bisque;
+}
+
+.session-form {
+    width: 250px;
+    height: 310px;
+    background-color: orangered;
+    margin: 15px auto;
+    justify-content: center;
+    color: bisque;
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+
+.session-form input, .session-form label, .session-form h2 {
+    margin: 15px auto;
+    justify-content: center;
+    color: bisque;
+    border-radius: 5px;
+    padding: 5px 20px 5px 10px;
+    background-color: orangered;
+    font-weight: 700
+}
+
+.session-form:nth-of-type(n){
+    display: flex;
+    justify-content: center;
+}
