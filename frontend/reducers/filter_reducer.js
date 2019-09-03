@@ -1,4 +1,4 @@
-
+import { UPDATE_BOUNDS } from '../actions/filter_actions';
 
 
 const filterReducer = (state = {}, action) => {
@@ -11,4 +11,4 @@ const filterReducer = (state = {}, action) => {
     }
 }
 
-export default filterReducer
+export default filterReducer;
