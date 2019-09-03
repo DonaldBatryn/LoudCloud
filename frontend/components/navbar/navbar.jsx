@@ -3,22 +3,25 @@ import { Link } from 'react-router-dom';
 
 export default ({ currentUser, logout }) => {
     const display = currentUser ? (
-        <div>
-            <p>Hello, {currentUser.username}!</p>
-            <button onClick={logout}>Log Out</button>
-        </div>
+        <ul>
+            <li className="nav-links"><Link to={`/users/${currentUser.id}`}>{currentUser.username}</Link></li>
+            <li className="nav-links"><button onClick={logout}>Log Out</button></li>
+            
+        </ul>
     ) : (
-        <div>
-            <Link className="btn" to="/signup" >Sign Up</Link>
-            <Link className="btn" to="/login" >Log In</Link>
-        </div>
+        <ul>
+            <li className="nav-links"><Link className="btn" to="/signup" >Sign Up</Link></li>
+            <li className="nav-links"><Link className="btn" to="/login" >Log In</Link></li>
+        </ul>
     );
     return (
         <header className="nav-bar">
-            <h1 className="logo">LoudCloud</h1>
-            <div>
-                {display}
-            </div>
+            <p><img className="logo" src="/assets/cloud.png" alt="LoudCloud" /></p>
+            <div className="nav-links"><Link to="/playlists">Playlists</Link></div>
+            <div className="nav-links"><Link to="/playlists">Tracks</Link></div>
+            <p className="nav-links">Search:  <input className="search-bar" type="text" spellCheck="false" ></input></p>
+            {display}
         </header>
     )
 }
+

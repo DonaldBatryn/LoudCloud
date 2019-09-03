@@ -1,0 +1,96 @@
+
+.modal {
+    display: none;
+}
+
+.modal.is-open {
+    display: block;
+}
+
+.modal-screen {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  
+}
+
+.modal-form {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -220px;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    background: orange;
+    z-index: 3;
+    border-radius: 15px;
+    border: 2px solid white;
+    
+}
+
+.modal-form label {
+    font-size: 23px;
+    font-family: Righteous, sans-serif;
+    color: bisque;
+}
+
+.modal-form label.instruction {
+    font-size: 13px;
+    font-family: Righteous, sans-serif;
+    color: bisque;
+    padding-left: 15px;
+}
+
+
+
+
+input#submit {
+    color: bisque;
+    background-color: #524848;;
+    padding: 3px 5px;
+    width: auto;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: all 0.3s ease 0s;
+}
+
+input#submit:hover {
+    background-color: rgba(133, 122, 122, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: bisque;
+}
+
+
+
+.modal-form > p {
+    margin: 0 0 20px 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding-left: 5px;
+    text-decoration: none;
+}

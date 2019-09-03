@@ -1,59 +1,89 @@
 // Place all the styles related to the api::session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 
-.logo {
-    width: 510px;
-    height: 150px;
-    background-color: orangered;
-    margin: auto;
-    color: bisque;
-    border-radius: 5px;
-    padding: 5px 5px 5px 18px;
-    font-size: 100px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-header > div {
-   float: right;
-    display: flex;
-}
-
-.btn {
-    width: 400px;
-    height: 50px;
-    background-color: orangered;
-    margin: 7px;
-    padding: 5px;
-    border-radius: 5px;
+p, a, button{
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(100, 97, 97);
     text-decoration: none;
-    color: bisque;
-}
-
-.session-form {
-    width: 250px;
-    height: 310px;
-    background-color: orangered;
-    margin: 15px auto;
-    justify-content: center;
-    color: bisque;
-    border-radius: 5px;
-    padding: 5px;
+    transition: all 0.3s ease 0s;
     
 }
 
-.session-form input, .session-form label, .session-form h2 {
-    margin: 15px auto;
-    justify-content: center;
-    color: bisque;
-    border-radius: 5px;
-    padding: 5px 20px 5px 10px;
-    background-color: orangered;
-    font-weight: 700
+button {
+    border: none;
 }
 
-.session-form:nth-of-type(n){
-    display: flex;
-    justify-content: center;
+input {
+    border-radius: 20px;
+    height: 30px;
+   
 }
+
+// input.search-bar {
+//     width: inherit;
+// }
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 4%;
+}
+
+ul {
+    display: flex;
+    width: 200px;
+    justify-content: space-evenly;
+    list-style: none;
+    align-content: center;
+}
+
+img.logo{
+    cursor: pointer;
+    height: 70px;
+    width: 90px;
+    color: bisque;
+    padding: 5px 10px;
+}
+
+img.logo:hover {
+    background-color: #eebd1e;
+    border: 1px solid #524848;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+
+header p.nav-links:hover {
+    background-color: #eebd1e;
+    border: 1px solid #524848;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links a {
+    transition: all 0.3s ease 0s;
+    width: 90px;
+}
+
+.nav-links a:hover {
+    color: orange;
+}
+
+.nav-links button:hover {
+    color: orange;
+}
+

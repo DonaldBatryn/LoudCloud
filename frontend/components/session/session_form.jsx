@@ -42,40 +42,47 @@ class SessionForm extends React.Component {
             let err = this.props.errors.errors;
            
             return (
-                <div className="session-form" >
-                <h2>{type}</h2>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Username:
-                        <input type="text" value={this.state.username} onChange={this.handleInput('username')}/>
-                    </label>
-                   
-                    <label>Password:
-                        <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
-                    </label>
-                    <input type="submit" value={type}/>
-                </form>
-                {err}
-            </div>
+                <div className="modal is-open" >
+                    <form className="modal-form" onSubmit={this.handleSubmit}>
+                        <span className="modal-close js-modal-close">&times;</span>
+
+                        <label>Username:
+                            <input type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')} />
+                        </label><br />
+                      
+                        <label>Password:
+                            <input type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
+                        </label><br />
+                        <input id="submit" type="submit" value={type} />
+                    <label className="instruction">Please {type} to continue to LoudCloud</label>
+                    </form>
+                    {err}
+                    <div className="modal-screen js-modal-close"></div>
+                </div>
             )
         } else {
             type = 'Sign Up';
             let err = this.props.errors.errors;
             return (
-                <div className="session-form" >
-                    <h2>{type}</h2>
-                    <form onSubmit={this.handleSubmit}>
+                <div className="modal is-open" >
+                    <form className="modal-form" onSubmit={this.handleSubmit}>
+                        <span className="modal-close js-modal-close">&times;</span>
+
                         <label>Username:
-                            <input type="text" value={this.state.username} onChange={this.handleInput('username')}/>
+                            <input type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')}/>
                         </label><br/>
-                        <label>Email:<br/>
-                            <input type="text" value={this.state.email} onChange={this.handleInput('email')} />
+                        <label>Email: 
+                            <input type="text" spellCheck="false" value={this.state.email} onChange={this.handleInput('email')} />
                         </label><br/>
                         <label>Password:
-                            <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
+                            <input type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
                         </label><br/>
-                        <input type="submit" value={type}/>
+                        <input id="submit" type="submit" value={type}/>
+                        <label className="instruction">Please {type} to continue to LoudCloud</label>
                     </form>
                     {err}
+                    <div className="modal-screen js-modal-close"></div>
+                    
                 </div>
             )
         }
