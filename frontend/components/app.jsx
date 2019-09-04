@@ -5,6 +5,7 @@ import NavBarContainer from './navbar/navbar_container'
 import LoginFormContainer from './session/login_container'
 import SignupFormContainer from './session/signup_container'
 import SplashContainer from './splash/splash_container'
+import PlayBarContainer from './playbar/playbar_container'
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
             <AuthRoute path="/signup" component={SignupFormContainer} />
 
             {/* <Route exact path="/" component={} /> */}
+            <Route path="/" component={PlayBarContainer} />
         </div>
     )
 }

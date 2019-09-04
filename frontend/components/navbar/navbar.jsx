@@ -15,6 +15,7 @@ export default ({ currentUser, logout }) => {
         }
     }
     return (
+        <div className="top-bar">
         <header className="nav-bar">
             <p><img className="logo" src="/assets/cloud.png" alt="LoudCloud" /></p>
             <div className="nav-links"><Link to="/playlists">Playlists</Link></div>
@@ -23,6 +24,7 @@ export default ({ currentUser, logout }) => {
             <div className="nav-links" >{display.link1}</div>
             <div className="nav-links" >{display.link2}</div>
         </header>
+        </div>
     )
 }
 

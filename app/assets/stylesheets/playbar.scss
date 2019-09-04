@@ -1,0 +1,45 @@
+
+[class*="icon-"]{
+   
+}
+
+button {
+    outline: none;
+    padding: 5px;
+    border: 1px solid whitesmoke;
+}
+
+button:hover {
+    background-color: rgba(247, 166, 60, 0.8);
+    border-radius: 20px;
+    border: 1px solid #524848;
+    // padding: 5px;
+}
+
+
+#play-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70px;
+    background-color: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 4%;
+    border-radius: 20px;
+    border: 3px solid gray;
+}
+
+#play-nav img {
+    width: 30px;
+    height: auto;
+    margin: 0 8px;
+
+
+}
+
+// .icon-shuffle {
+//     width: 35px;
+//     height: 30px;
+// }
