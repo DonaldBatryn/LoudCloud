@@ -39,7 +39,7 @@ class SessionForm extends React.Component {
         
         if (this.props.formType === "Login"){
             type = 'Login';
-            let err = this.props.errors.errors;
+            let err = this.props.session.errors;
            
             return (
                 <div className="modal is-open" >
@@ -53,8 +53,10 @@ class SessionForm extends React.Component {
                         <label>Password:
                             <input type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
                         </label><br />
-                        <input id="submit" type="submit" value={type} />
-                    <label className="instruction">Please {type} to continue to LoudCloud</label>
+                        <div id="submit-container">
+                            <input id="submit" type="submit" value={type} />
+                            <label className="instruction">Please {type} to continue to LoudCloud</label>
+                        </div>
                     </form>
                     {err}
                     <div className="modal-screen js-modal-close"></div>
@@ -62,23 +64,24 @@ class SessionForm extends React.Component {
             )
         } else {
             type = 'Sign Up';
-            let err = this.props.errors.errors;
+            let err = this.props.session.errors;
             return (
                 <div className="modal is-open" >
                     <form className="modal-form" onSubmit={this.handleSubmit}>
                         <span className="modal-close js-modal-close">&times;</span>
 
-                        <label>Username:
-                            <input type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')}/>
-                        </label><br/>
-                        <label>Email: 
-                            <input type="text" spellCheck="false" value={this.state.email} onChange={this.handleInput('email')} />
-                        </label><br/>
-                        <label>Password:
-                            <input type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
-                        </label><br/>
-                        <input id="submit" type="submit" value={type}/>
-                        <label className="instruction">Please {type} to continue to LoudCloud</label>
+                        <label for="username">Username:</label>
+                            <input id="username" type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')}/>
+                        
+                        <label for="email">Email: </label>
+                        <input id="email" type="text" spellCheck="false" value={this.state.email} onChange={this.handleInput('email')} />
+                        
+                        <label for="password">Password:</label>
+                        <input id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
+                        <div id="submit-container">
+                            <input id="submit" type="submit" value={type}/>
+                            <label className="instruction">Please {type} to continue to LoudCloud</label>
+                        </div>
                     </form>
                     {err}
                     <div className="modal-screen js-modal-close"></div>

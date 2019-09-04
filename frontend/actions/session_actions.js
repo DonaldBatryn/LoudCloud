@@ -21,11 +21,11 @@ export const receiveErrors = (errors) => ({
 })
 
 export const login = (formUser) => (dispatch) => {
-    return APIUtil.login(formUser).then(user => dispatch(receiveCurrentUser(user)))
+    return APIUtil.login(formUser).then(user => dispatch(receiveCurrentUser(user)), err => dispatch(receiveErrors(err.responseJSON)))
 }
 
 export const createNewUser = (formUser) => (dispatch) => {
-    return APIUtil.signup(formUser).then(user => dispatch(receiveCurrentUser(user)))
+    return APIUtil.signup(formUser).then(user => dispatch(receiveCurrentUser(user)), err => dispatch(receiveErrors(err.responseJSON)))
 }
 
 export const logout = () => (dispatch) => {
