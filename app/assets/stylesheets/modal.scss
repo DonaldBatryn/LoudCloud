@@ -45,10 +45,11 @@
 
 .modal-form label.instruction {
     font-size: 13px;
-    font-family: Righteous, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     color: bisque;
     padding-top: 15px;
     width: 220px;
+
 }
 
 #submit-container {
@@ -61,7 +62,7 @@
 
 
 
-input#submit {
+input.submit {
     color: bisque;
     background-color: #524848;;
     padding: 3px 5px;
@@ -103,6 +104,7 @@ input {
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     padding-left: 5px;
+    margin-top: 10px;
     text-decoration: none;
 }
 
@@ -112,11 +114,31 @@ div.errors {
     // top: 490px;
     // left: 50%;
     // margin-left: -220px;
-    margin-bottom: 30px;
+    // margin-bottom: 40px;
+    padding-bottom: 30px;
     width: 100%;
     height: auto;
     color: red;
-    font-size: 15px;
+    font-size: 18px;
     z-index: 4;
     text-align: center;
+}
+
+button.submit {
+    color: bisque;
+    background-color: #524848;;
+    padding: 3px 5px;
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 80px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease 0s;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+button.submit:hover {
+    background-color: rgba(133, 122, 122, 0.5);
 }

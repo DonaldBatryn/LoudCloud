@@ -61,8 +61,8 @@ class SessionForm extends React.Component {
             return (
                 <div className="modal is-open" >
                     <form className="modal-form" onSubmit={this.handleSubmit}>
-                        <button id="guest-login" onClick={this.handleDemo}>Continue as Guest</button><br/>
                     <div className="errors">{err}</div>
+                        <button className="submit" onClick={this.handleDemo}>Continue as Guest</button><br/>
                         <span className="modal-close js-modal-close">&times;</span>
 
 
@@ -74,7 +74,7 @@ class SessionForm extends React.Component {
                             <input id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
                         
                         <div id="submit-container">
-                            <input id="submit" type="submit" value={type} />
+                            <input className="submit" type="submit" value={type} />
                             <label className="instruction">Please {type} to continue to LoudCloud</label>
                         </div>
                     </form>
@@ -87,8 +87,8 @@ class SessionForm extends React.Component {
             return (
                 <div className="modal is-open" >
                     <form className="modal-form" onSubmit={this.handleSubmit}>
-                        <button id="guest-login" onClick={this.handleDemo}>Continue as Guest</button><br />
                     <div className="errors">{err}</div>
+                        <button className="submit" onClick={this.handleDemo}>Continue as Guest</button><br />
                         <span className="modal-close js-modal-close">&times;</span>
 
 
@@ -101,7 +101,7 @@ class SessionForm extends React.Component {
                         <label htmlFor="password">Password:</label>
                         <input id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
                         <div id="submit-container">
-                            <input id="submit" type="submit" value={type}/>
+                            <input className="submit" type="submit" value={type}/>
                             <label className="instruction">Please {type} to continue to LoudCloud</label>
                         </div>
                     </form>

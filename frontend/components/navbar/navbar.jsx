@@ -7,7 +7,8 @@ export default ({ currentUser, logout }) => {
     if (currentUser){
         display = { 
             link1: <Link to={`/users/${currentUser.id}`}>{currentUser.username}</Link>,
-            link2: <button onClick={logout}>Log Out</button>} 
+            // link2: <button onClick={logout}>Log Out</button> 
+            link2: <Link to="/">Log Out</Link> }
     } else {
         display = {
             link1: <Link className="btn" to="/signup" >Sign Up</Link>,
