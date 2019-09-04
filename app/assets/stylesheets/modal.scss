@@ -27,9 +27,10 @@
     width: 400px;
     height: auto;
     padding: 20px;
+    padding-top: 90px;
     background: orange;
     z-index: 3;
-    border-radius: 15px;
+    border-radius: 7px;
     border: 2px solid white;
     
 }
@@ -107,11 +108,12 @@ input {
 
 div.errors {
     display: block;
-    position: fixed;
-    top: 490px;
-    left: 50%;
-    margin-left: -220px;
-    width: 400px;
+    // position: fixed;
+    // top: 490px;
+    // left: 50%;
+    // margin-left: -220px;
+    margin-bottom: 30px;
+    width: 100%;
     height: auto;
     color: red;
     font-size: 15px;

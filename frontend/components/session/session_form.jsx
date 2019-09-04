@@ -18,6 +18,7 @@ class SessionForm extends React.Component {
             }
         }
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     handleInput(field){
@@ -33,6 +34,22 @@ class SessionForm extends React.Component {
         )
     }
 
+    handleDemo(e){
+        e.preventDefault();
+        if (this.props.formType === "Login"){
+            this.props.processForm({
+                username: "Guest",
+                password: '123456'
+            }).then(() => this.props.history.push("/songs"))
+        } else {
+            this.props.processForm({
+                username: "Guest",
+                email: 'guest@loudcloud.com',
+                password: '123456'
+            }).then(() => this.props.history.push("/songs"))
+        }
+    }
+
     render(){
         let type;
         let linkType;
@@ -44,7 +61,10 @@ class SessionForm extends React.Component {
             return (
                 <div className="modal is-open" >
                     <form className="modal-form" onSubmit={this.handleSubmit}>
+                        <button id="guest-login" onClick={this.handleDemo}>Continue as Guest</button><br/>
+                    <div className="errors">{err}</div>
                         <span className="modal-close js-modal-close">&times;</span>
+
 
                         <label htmlFor="username">Username:</label>
                             <input id="username" type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')} />
@@ -57,7 +77,6 @@ class SessionForm extends React.Component {
                             <input id="submit" type="submit" value={type} />
                             <label className="instruction">Please {type} to continue to LoudCloud</label>
                         </div>
-                    <div className="errors">{err}</div>
                     </form>
                     <div className="modal-screen js-modal-close"></div>
                 </div>
@@ -68,7 +87,10 @@ class SessionForm extends React.Component {
             return (
                 <div className="modal is-open" >
                     <form className="modal-form" onSubmit={this.handleSubmit}>
+                        <button id="guest-login" onClick={this.handleDemo}>Continue as Guest</button><br />
+                    <div className="errors">{err}</div>
                         <span className="modal-close js-modal-close">&times;</span>
+
 
                         <label htmlFor="username">Username:</label>
                             <input id="username" type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')}/>
@@ -83,7 +105,6 @@ class SessionForm extends React.Component {
                             <label className="instruction">Please {type} to continue to LoudCloud</label>
                         </div>
                     </form>
-                    <div className="errors">{err}</div>
                     <div className="modal-screen js-modal-close"></div>
                     
                 </div>
