@@ -21,9 +21,9 @@ export default ({ currentUser, logout, openModal }) => {
     return (
         <div className="top-bar">
         <header className="nav-bar">
-            <p><Link to="/"><img className="logo" src="/assets/cloud.png" alt="LoudCloud" /></Link></p>
+            <p><Link to="/home"><img className="logo" src="/assets/cloud.png" alt="LoudCloud" /></Link></p>
             <div className="nav-links"><Link to="/playlists">Playlists</Link></div>
-            <div className="nav-links"><Link to="/songs">Songs</Link></div>
+                <div className="nav-links"><Link to="/songs"><button onClick={() => openModal('Upload')}>Upload</button></Link></div>
             <p className="nav-links">Search:  <input className="search-bar" type="text" spellCheck="false" ></input></p>
             <div  >{display.link1}</div>
             <div  >{display.link2}</div>

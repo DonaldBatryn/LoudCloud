@@ -1,3 +1,68 @@
 // Place all the styles related to the api::songs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-index {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+    width: 700px;
+    height: 800px;
+    background-color: gray;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: center;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
+}
+
+
+.catagory-index-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 98%;
+    height: 25%;
+    background-color: pink;
+    border-radius: 3px;
+}
+
+.catagory-text {
+    height: 25%;
+    width: 98%;
+    background-color: gray;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 3px;
+}
+
+
+.song-group {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    // padding: 10%;
+    background-color: bisque;
+    border-radius: 3px;
+}
+
+.song {
+    width: 20%;
+    height: 90%;
+    background-color: gray;
+    transition: all 0.3s ease 0s;
+    border-radius: 3px;
+    // border-radius: 6px;
+}
+
+.song:hover{
+    background-color: rgba(128, 128, 128, 0.9);
+    // width: 19.5%;
+    // height: 89%;
+}

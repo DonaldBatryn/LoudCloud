@@ -37,7 +37,7 @@
 
 .modal-form label {
     font-size: 23px;
-    font-family: Righteous, sans-serif;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
     color: gray;
     width: 120px;
     display: inline-block
@@ -45,7 +45,7 @@
 
 .modal-form label.instruction {
     font-size: 13px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
     color: gray;
     padding-top: 15px;
     width: 220px;
@@ -84,7 +84,7 @@ input:focus {
 }
 
 input {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
     font-size: 16px;
     padding-left: 5px;
     text-decoration: none;
@@ -130,7 +130,7 @@ input.submit {
     height: 60px;
     border-radius: 5px;
     transition: all 0.3s ease 0s;
-    font-family: Righteous, sans-serif;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
     margin-bottom: 18px;
 }
 
@@ -140,6 +140,23 @@ input.submit:hover {
 
 button.other-form {
     border: 2px solid orange;
-    font-family: Righteous, sans-serif;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
 }
 
+textarea.form {
+    margin-top: 10px;
+    margin-right: 23px;
+    outline: none;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
+    font-size: 16px;
+    // padding-left: 15px;
+    text-decoration: none;
+    width: 190px;
+    height: 100px;
+}
+
+div.descrip-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}

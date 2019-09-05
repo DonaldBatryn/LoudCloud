@@ -3,6 +3,8 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session/login_container'
 import SignupFormContainer from '../session/signup_container'
+import UploadSongFormContainer from '../songs/create_song_form_container'
+import EditSongForm from '../songs/edit_song_form_container'
 
 function Modal({modal, closeModal}) {
     if (!modal){
@@ -16,6 +18,12 @@ function Modal({modal, closeModal}) {
         case 'Sign up':
             component = <SignupFormContainer/>;
             break;
+        case 'Upload':
+            component = <UploadSongFormContainer />;
+            break;
+        case 'Update':
+            component = <EditSongForm />;
+            break
         default:
             return null;
     }
