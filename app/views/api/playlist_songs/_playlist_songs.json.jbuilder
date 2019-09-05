@@ -1,0 +1,1 @@
+json.extract! playlist_songs, :id, :playlist_id, :song_id

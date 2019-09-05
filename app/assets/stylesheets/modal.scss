@@ -53,17 +53,14 @@
 }
 
 #submit-container {
-    width: 400px;
+    width: 350px;
     padding: 35px 0 0 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     // flex-wrap: wrap;
     flex-direction: column;
 }
-
-
-
-
 
 .modal-close {
     position: absolute;
@@ -77,8 +74,6 @@
 .modal-close:hover {
     color: bisque;
 }
-
-
 
 .modal-form > p {
     margin: 0 0 20px 0;
@@ -98,11 +93,6 @@ input {
 
 div.errors {
     display: block;
-    // position: fixed;
-    // top: 490px;
-    // left: 50%;
-    // margin-left: -220px;
-    // margin-bottom: 40px;
     padding-bottom: 30px;
     width: 100%;
     height: auto;
@@ -115,34 +105,27 @@ div.errors {
 button.submit {
     color: bisque;
     background-color: #524848;;
-    padding: 3px 5px;
     width: 50%;
     height: 60px;
-    // border-radius: 5px;
-    // margin-right: 30px;
-    // margin-top: 15px;
-    // margin-left: 0px;
-    // margin-bottom: 20px;
+    border-radius: 5px;
     transition: all 0.3s ease 0s;
     font-family: 'Courier New', Courier, monospace;
 }
-
 
 button.submit:hover {
     background-color: rgba(133, 122, 122, 0.5);
     
 }
 
-
 input.submit {
     color: bisque;
     background-color: #524848;;
-    // padding: 3px 5px;
     width: 50%;
     height: 60px;
     border-radius: 5px;
-    // margin-top: 15px;
     transition: all 0.3s ease 0s;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 18px;
 }
 
 input.submit:hover {

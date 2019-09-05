@@ -1,26 +1,6 @@
-[class*="icon-"]:hover{
-    background-color: rgba(247, 166, 60, 0.8);
-    border-radius: 17px;
-    // border: 1px solid #524848;
-    // padding: 5px;
-    // margin: 2px;
-}
 
 
-// button {
-//     outline: none;
-//     padding: 5px;
-//     border: 1px solid whitesmoke;
-// }
-
-button.icon-play:hover {
-    // background-color: rgba(247, 166, 60, 0.8);
-    // border-radius: 20px;
-    // border: 1px solid #524848;
-    // padding: 5px;
-}
-
-
+// play NavBar settings
 #play-nav {
     display: flex;
     justify-content: flex-start;
@@ -31,19 +11,23 @@ button.icon-play:hover {
     bottom: 0;
     width: 100%;
     padding: 15px 4%;
-    // border-radius: 20px;
-    // border: 3px solid gray;
+  
 }
 
+// player button animation
+[class*="icon-"]:hover{
+    background-color: rgba(247, 166, 60, 0.8);
+    border-radius: 17px;
+    // border: 1px solid #524848;
+    padding: 5px;
+    // margin: 2px;
+}
+
+// player button sizing
 #play-nav img {
     width: 30px;
     height: auto;
     margin: 0 8px;
 
-
 }
 
-// .icon-shuffle {
-//     width: 35px;
-//     height: 30px;
-// }

@@ -39,7 +39,6 @@ class SessionForm extends React.Component {
             this.props.closeModal()
         }
         })
-      
     }
 
     handleDemo(e){
@@ -51,22 +50,9 @@ class SessionForm extends React.Component {
        
     }
 
-
     componentWillUnmount(){
         this.props.clearErrors()
     }
-
-    // renderErrors(){
-    //     return (
-    //         <ul>
-    //             {this.props.session.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     )
-    // }
 
     render(){
         let type;

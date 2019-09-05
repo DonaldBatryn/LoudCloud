@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 
 
-// * {
-//     box-sizing: border-box;
-//     margin: 0;
-//     padding: 0;
-
-// }
 
 p{
     font-family: 'Righteous', cursive;
@@ -98,24 +92,13 @@ header p.nav-links:hover {
     transition: all 0.3s ease 0s;
 }
 
-// .nav-links a {
-//     transition: all 0.3s ease 0s;
-//     width: 90px;
-// }
 
 // Playlist/Songs orange hover
 .nav-links a:hover {
     color: orange;
 }
-// POSSIBLY COMMENT BACK IN
+// SignUp/LogIn/LogOut/Username orange hover
 button.nav-links:hover {
     color: orange;
 }
 
-// header div button#logout:hover {
-//     background-color: whitesmoke;
-//     transition: none;
-//     border: none;
-//     border-radius: 0;
-//     position: relative;
-// }
