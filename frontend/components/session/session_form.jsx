@@ -72,11 +72,11 @@ class SessionForm extends React.Component {
 
 
                         <label htmlFor="username">Username:</label>
-                            <input id="username" type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')} />
+                            <input className="form" id="username" type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')} />
                         
                       
                         <label htmlFor="password">Password:</label>
-                            <input id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
+                            <input className="form" id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
                         
                         <div id="submit-container">
                             <input className="submit" type="submit" value={type} />
@@ -102,13 +102,13 @@ class SessionForm extends React.Component {
 
 
                         <label htmlFor="username">Username:</label>
-                            <input id="username" type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')}/>
+                            <input className="form" id="username" type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')}/>
                         
                         <label htmlFor="email">Email: </label>
-                        <input id="email" type="text" spellCheck="false" value={this.state.email} onChange={this.handleInput('email')} />
+                        <input className="form" id="email" type="text" spellCheck="false" value={this.state.email} onChange={this.handleInput('email')} />
                         
                         <label htmlFor="password">Password:</label>
-                        <input id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
+                        <input className="form" id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
                         <div id="submit-container">
                             <input className="submit" type="submit" value={type}/>
                             {this.props.otherForm}

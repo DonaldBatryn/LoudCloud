@@ -20,6 +20,7 @@
     border-radius: 17px;
     // border: 1px solid #524848;
     padding: 5px;
+    cursor: pointer;
     // margin: 2px;
 }
 
@@ -31,3 +32,8 @@
 
 }
 
+.player-wrapper {
+    width: 66.66%;
+    height: 70px;
+    background-color: gray;
+}

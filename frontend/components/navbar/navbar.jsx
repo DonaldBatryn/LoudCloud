@@ -7,8 +7,8 @@ export default ({ currentUser, logout, openModal }) => {
     let display;
     if (currentUser){
         display = { 
-            link1: <Link to={`/users/${currentUser.id}`}>{currentUser.username}</Link>,
-            link2: <button id="logout" onClick={logout}>Log Out</button> 
+            link1: <Link className="nav-links" to={`/users/${currentUser.id}`}>{currentUser.username}</Link>,
+            link2: <button className="nav-links" id="logout" onClick={logout}>Log Out</button> 
             // link2: <Link to="/">Log Out</Link> 
         }
     } else {

@@ -3,7 +3,8 @@
 
 
 p{
-    font-family: 'Righteous', cursive;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
+    // font-family: 'Righteous', cursive;
     font-weight: 500;
     font-size: 16px;
     color: rgb(100, 97, 97);
@@ -12,7 +13,8 @@ p{
 }
 
 a{
-    font-family: 'Righteous', cursive;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
+    // font-family: 'Righteous', cursive;
     font-weight: 500;
     font-size: 16px;
     color: rgb(100, 97, 97);
@@ -21,7 +23,8 @@ a{
 }
 
 button{
-    font-family: 'Righteous', cursive;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
+    // font-family: 'Righteous', cursive;
     font-weight: 500;
     font-size: 16px;
     color: rgb(100, 97, 97);
@@ -95,6 +98,10 @@ header p.nav-links:hover {
 
 // Playlist/Songs orange hover
 .nav-links a:hover {
+    color: orange;
+}
+
+a.nav-links:hover {
     color: orange;
 }
 // SignUp/LogIn/LogOut/Username orange hover

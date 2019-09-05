@@ -10,9 +10,11 @@ class User < ApplicationRecord
 
     has_many :songs
     has_many :comments
-    has_one_attached :photo
     has_many :playlists
+    
+    has_one_attached :image
 
+    
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
         user && user.is_password?(password) ? user : nil

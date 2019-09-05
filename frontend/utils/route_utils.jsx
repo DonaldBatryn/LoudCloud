@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect, Route, withRouter } from 'react-router-dom';
 
 const msp = state => ({
-    loggedIn: Boolean(state.session.currentUser)
+    loggedIn: Boolean(state.session.id)
 });
 
 // <AuthRoute path="" component={} />
