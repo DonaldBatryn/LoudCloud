@@ -1,97 +1,105 @@
 // Place all the styles related to the api::session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 
-}
+// * {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
 
-p, a, button{
-    font-family: 'Righteous', cursive;
-    font-weight: 500;
-    font-size: 16px;
-    color: rgb(100, 97, 97);
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
-}
+// }
 
-button {
-    background-color: whitesmoke;
-    border: none;
-}
+// p, a, button{
+//     font-family: 'Righteous', cursive;
+//     font-weight: 500;
+//     font-size: 16px;
+//     color: rgb(100, 97, 97);
+//     text-decoration: none;
+//     transition: all 0.3s ease 0s;
+// }
 
-input {
-    border-radius: 8px;
-    height: 30px;
+// button {
+//     background-color: whitesmoke;
+//     border: none;
+// }
+
+// input {
+//     border-radius: 8px;
+//     height: 30px;
    
-}
+// }
 
-.top-bar {
-    display: block;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 88px;
-    background-color: whitesmoke;
-    // border-radius: 20px;
-    // border: 3px solid gray;
-}
+// .top-bar {
+//     display: block;
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+//     height: 88px;
+//     background-color: whitesmoke;
+//     // border-radius: 20px;
+//     // border: 3px solid gray;
+// }
 
 
-header {
-    display: flex;
-    
-    justify-content: space-between;
-    align-items: center;
-    padding: 7px 4%;
-}
+// header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 7px 4%;
+// }
 
-ul {
-    display: flex;
-    width: 200px;
-    justify-content: space-evenly;
-    list-style: none;
-    align-content: center;
-}
+// ul {
+//     display: flex;
+//     width: 200px;
+//     justify-content: space-evenly;
+//     list-style: none;
+//     align-content: center;
+// }
 
-img.logo{
-    cursor: pointer;
-    height: 70px;
-    width: 90px;
-    color: bisque;
-    padding: 5px 10px;
-}
+// img.logo{
+//     cursor: pointer;
+//     height: 70px;
+//     width: 90px;
+//     color: bisque;
+//     padding: 5px 10px;
+// }
 
-img.logo:hover {
-    background-color: #eebd1e;
-    border: 1px solid #524848;
-    padding: 10px 15px;
-    border-radius: 50px;
-    transition: all 0.3s ease 0s;
-}
+// img.logo:hover {
+//     background-color: #eebd1e;
+//     border: 1px solid #524848;
+//     padding: 10px 15px;
+//     border-radius: 50px;
+//     transition: all 0.3s ease 0s;
+// }
 
-header p.nav-links:hover {
-    background-color: #eebd1e;
-    border: 1px solid #524848;
-    padding: 10px 15px;
-    border-radius: 50px;
-    transition: all 0.3s ease 0s;
-}
+// header p.nav-links:hover {
+//     background-color: #eebd1e;
+//     border: 1px solid #524848;
+//     padding: 10px 15px;
+//     border-radius: 50px;
+//     transition: all 0.3s ease 0s;
+// }
 
-.nav-links a {
-    transition: all 0.3s ease 0s;
-    width: 90px;
-}
+// .nav-links a {
+//     transition: all 0.3s ease 0s;
+//     width: 90px;
+// }
 
-.nav-links a:hover {
-    color: orange;
-}
+// .nav-links a:hover {
+//     color: orange;
+// }
 
-.nav-links button:hover {
-    color: orange;
-}
+// .nav-links button:hover {
+//     color: orange;
+// }
 
+// header div button#logout:hover {
+//     background-color: whitesmoke;
+//     transition: none;
+//     border: none;
+//     border-radius: 0;
+//     position: relative;
+// }
+///////////////////////////////

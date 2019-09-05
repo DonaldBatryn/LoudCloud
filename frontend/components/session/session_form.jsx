@@ -29,26 +29,44 @@ class SessionForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.processForm(this.state).then(
-            () => this.props.history.push("/songs")
-        )
+        const user = Object.assign({}, this.state)
+   
+        this.props.processForm(user).then(() => {
+        if (this.props.session.length > 0){
+            return
+           
+        }else {
+            this.props.closeModal()
+        }
+        })
+      
     }
 
     handleDemo(e){
         e.preventDefault();
-        if (this.props.formType === "Login"){
-            this.props.processForm({
-                username: "Guest",
-                password: '123456'
-            }).then(() => this.props.history.push("/songs"))
-        } else {
-            this.props.processForm({
-                username: "Guest",
-                email: 'guest@loudcloud.com',
-                password: '123456'
-            }).then(() => this.props.history.push("/songs"))
-        }
+        this.props.processForm({
+            username: "Guest",
+            password: '123456'
+        }).then(this.props.closeModal())
+       
     }
+
+
+    componentWillUnmount(){
+        this.props.clearErrors()
+    }
+
+    // renderErrors(){
+    //     return (
+    //         <ul>
+    //             {this.props.session.errors.map((error, i) => (
+    //                 <li key={`error-${i}`}>
+    //                     {error}
+    //                 </li>
+    //             ))}
+    //         </ul>
+    //     )
+    // }
 
     render(){
         let type;
@@ -56,14 +74,15 @@ class SessionForm extends React.Component {
         
         if (this.props.formType === "Login"){
             type = 'Login';
-            let err = this.props.session.errors;
-           
+            let err = this.props.session;
+            err = err.join(", ")
             return (
                 <div className="modal is-open" >
                     <form className="modal-form" onSubmit={this.handleSubmit}>
+                        <label className="instruction">Please {type} to continue to LoudCloud</label>
                     <div className="errors">{err}</div>
-                        <button className="submit" onClick={this.handleDemo}>Continue as Guest</button><br/>
-                        <span className="modal-close js-modal-close">&times;</span>
+                    {/* {this.renderErrors()} */}
+                        <span className="modal-close js-modal-close" onClick={this.props.closeModal}>&times;</span>
 
 
                         <label htmlFor="username">Username:</label>
@@ -75,21 +94,25 @@ class SessionForm extends React.Component {
                         
                         <div id="submit-container">
                             <input className="submit" type="submit" value={type} />
-                            <label className="instruction">Please {type} to continue to LoudCloud</label>
+                            <button className="submit" onClick={this.handleDemo}>Continue as Guest</button><br/>
+                            {this.props.otherForm}
+
                         </div>
                     </form>
-                    <div className="modal-screen js-modal-close"></div>
+                    <div className="modal-screen js-modal-close" onClick={this.props.closeModal}></div>
                 </div>
             )
         } else {
             type = 'Sign Up';
-            let err = this.props.session.errors;
+            let err = this.props.session;
+            err = err.join(", ")
             return (
                 <div className="modal is-open" >
                     <form className="modal-form" onSubmit={this.handleSubmit}>
+                            <label className="instruction">Please {type} to continue to LoudCloud</label>
                     <div className="errors">{err}</div>
-                        <button className="submit" onClick={this.handleDemo}>Continue as Guest</button><br />
-                        <span className="modal-close js-modal-close">&times;</span>
+                        {/* {this.renderErrors()} */}
+                        <span className="modal-close js-modal-close" onClick={this.props.closeModal}>&times;</span>
 
 
                         <label htmlFor="username">Username:</label>
@@ -102,10 +125,10 @@ class SessionForm extends React.Component {
                         <input id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
                         <div id="submit-container">
                             <input className="submit" type="submit" value={type}/>
-                            <label className="instruction">Please {type} to continue to LoudCloud</label>
+                            {this.props.otherForm}
                         </div>
                     </form>
-                    <div className="modal-screen js-modal-close"></div>
+                    <div className="modal-screen js-modal-close" onClick={this.props.closeModal}></div>
                     
                 </div>
             )

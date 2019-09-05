@@ -1,18 +1,22 @@
-
-[class*="icon-"]{
-   
-}
-
-button {
-    outline: none;
-    padding: 5px;
-    border: 1px solid whitesmoke;
-}
-
-button:hover {
+[class*="icon-"]:hover{
     background-color: rgba(247, 166, 60, 0.8);
-    border-radius: 20px;
-    border: 1px solid #524848;
+    border-radius: 17px;
+    // border: 1px solid #524848;
+    // padding: 5px;
+    // margin: 2px;
+}
+
+
+// button {
+//     outline: none;
+//     padding: 5px;
+//     border: 1px solid whitesmoke;
+// }
+
+button.icon-play:hover {
+    // background-color: rgba(247, 166, 60, 0.8);
+    // border-radius: 20px;
+    // border: 1px solid #524848;
     // padding: 5px;
 }
 

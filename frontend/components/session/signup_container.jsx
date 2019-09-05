@@ -1,7 +1,9 @@
-
+import React from 'react';
 import { connect } from 'react-redux'
 import SessionForm from './session_form'
-import { createNewUser } from '../../actions/session_actions'
+import { createNewUser, clearErrors } from '../../actions/session_actions'
+import { openModal, closeModal } from '../../actions/modal_actions'
+
 
 const msp = (state, ownProps) => {
     return ({
@@ -13,7 +15,14 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch, ownProps) => {
 
     return ({
-        processForm: user => dispatch(createNewUser(user))
+        processForm: user => dispatch(createNewUser(user)),
+        clearErrors: () => dispatch(clearErrors()),
+        otherForm: (
+            <button className="submit" onClick={() => dispatch(openModal("Login"))}>
+                Login Form
+            </button>
+        ),
+        closeModal: () => dispatch(closeModal())
     })
 }
 
