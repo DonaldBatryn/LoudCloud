@@ -18,7 +18,8 @@ class SessionForm extends React.Component {
             }
         }
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleDemo = this.handleDemo.bind(this);
+        // this.handleDemo = this.handleDemo.bind(this);
+        this.prettyDemoUser = this.prettyDemoUser.bind(this);
     }
 
     handleInput(field){
@@ -41,14 +42,44 @@ class SessionForm extends React.Component {
         })
     }
 
-    handleDemo(e){
+    async prettyDemoUser(e) {
         e.preventDefault();
-        this.props.processForm({
-            username: "Guest",
+
+        const demoUser = {
+            username: 'Guest',
             password: '123456'
-        }).then(this.props.closeModal())
-       
+        };
+
+        const sleep = ms => new Promise(res => setTimeout(res, ms));
+
+        document.getElementById('username').focus();
+        for (let i = 1; i <= demoUser.username.length; i++) {
+            this.setState({ username: demoUser.username.substr(0, i) });
+            await sleep(50);
+        }
+
+        await sleep(250);
+
+        document.getElementById('password').focus();
+        for (let i = 1; i <= demoUser.password.length; i++) {
+            this.setState({ password: demoUser.password.substr(0, i) });
+            await sleep(50);
+        }
+
+        await sleep(500);
+
+        document.getElementById('demo-submit').click();
+        document.getElementById('password').blur();
     }
+
+    // handleDemo(e){
+    //     e.preventDefault();
+    //     this.props.processForm({
+    //         username: "Guest",
+    //         password: '123456'
+    //     }).then(this.props.closeModal())
+       
+    // }
 
     componentWillUnmount(){
         this.props.clearErrors()
@@ -79,8 +110,8 @@ class SessionForm extends React.Component {
                             <input className="form" id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
                         
                         <div id="submit-container">
-                            <input className="submit" type="submit" value={type} />
-                            <button className="submit" onClick={this.handleDemo}>Continue as Guest</button><br/>
+                            <input id="demo-submit"  className="submit" type="submit" value={type} />
+                            <button className="submit" onClick={this.prettyDemoUser}>Continue as Guest</button><br/>
                             {this.props.otherForm}
 
                         </div>

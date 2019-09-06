@@ -27,6 +27,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
     "heroku": "^7.29.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -38,5 +39,8 @@
     "redux-thunk": "^2.3.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.5.5"
   }
 }

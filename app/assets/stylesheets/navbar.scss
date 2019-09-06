@@ -109,3 +109,12 @@ button.nav-links:hover {
     color: orange;
 }
 
+button.search-button {
+    transition: all 0.3s ease 0s;
+    border-radius: 7px;
+    margin-left: 8px;
+}
+
+button.search-button:hover {
+    background-color: #eebd1e;
+}
