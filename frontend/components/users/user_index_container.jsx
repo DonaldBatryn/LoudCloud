@@ -4,7 +4,8 @@ import { fetchUsers } from '../../actions/user_actions'
 
 const msp = state => {
     return ({
-        currentUser: state.entities.users[state.session.id]
+        currentUser: state.entities.users[state.session.id],
+        users: Object.keys(state.entities.users).map(id => state.entities.users[id])
         
         
     })
@@ -17,3 +18,5 @@ const mdp = dispatch => ({
 })
 
 export default connect(msp, mdp)(UserIndex)
+
+// Object.keys(state.entities.users).map(id => state.entities.users[id])

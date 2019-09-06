@@ -1,26 +1,25 @@
 import React from 'react';
 import UserSnippet from './user_snippet'
 
-class UserIndexItem extends React.Component{
-    constructor(props){
-        super(props)
-    }
+const UserIndexItem = props => {
+    console.log(props)
 
-    render(){
-        return (
-            <div className="user-index-item">
-                <div className="group-text">
-                    <h2>{this.props.item}</h2>
-                </div>
-                <span className="line"></span>
-                <div className="snippets">
-                    <UserSnippet user={this.props.users[0]} />
-                    <UserSnippet user={this.props.users[1]}/>
-                    <UserSnippet user={this.props.users[2]}/>
-                </div>
+    let userSnips = props.users.map(user => {
+        return <UserSnippet key={user.id} user={user} />
+    })
+
+    return (
+        <div className="user-index-item">
+            <div className="group-text">
+                <h2 className="user-header">{props.item}</h2>
             </div>
-        )
-    }
+            <span className="line"></span>
+            <div className="snippets">
+                {userSnips}
+            </div>
+        </div>
+    )
+ 
 }
 
 export default UserIndexItem;
