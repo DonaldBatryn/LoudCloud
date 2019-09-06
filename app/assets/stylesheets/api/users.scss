@@ -11,6 +11,7 @@
     margin-left: 50px;
     // background-color: pink;
     min-width: 400px;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -20,6 +21,7 @@
 }
 
 .user-index-item {
+    // max-width: 350px;
     height: 30%;
     width: 98%;
     // background-color: lightskyblue;
@@ -43,6 +45,7 @@
     margin-top: 10px;
     height: 15%;
     width: 95%;
+    padding: 5px 0 0 5px;
 }
 
 .snippets {

@@ -2,7 +2,7 @@ import React from 'react';
 import UserSnippet from './user_snippet'
 
 const UserIndexItem = props => {
-    console.log(props)
+    
 
     let userSnips = props.users.map(user => {
         return <UserSnippet key={user.id} user={user} />

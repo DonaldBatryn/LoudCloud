@@ -14,7 +14,7 @@ class UserSnippet extends React.Component{
     }
 
     render(){
-        console.log(this.props)
+       
         return (
             <Link className="user-link" to={`/users/${this.props.user.id}`} ><div className="user-snip">
                 <img className="user-thumb" src="/assets/cloud.png" alt={this.props.user.username} />
