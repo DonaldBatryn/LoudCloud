@@ -16,6 +16,13 @@ export const search = query => (
 export const recents = userId => (
     $.ajax({
         method: 'GET',
-        url: `api/users/${}`
+        url: `api/users/${userId}/play`
+    })
+)
+
+export const play = (songId, userId) => (
+    $.ajax({
+        method: 'POST',
+        url: `api/users/${userId}/play/${songId}`
     })
 )
