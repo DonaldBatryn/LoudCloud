@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { openModal } from '../../actions/modal_actions'
 
 export default ({ currentUser, logout, openModal }) => {
-    console.log(currentUser)
+   
     let display;
     if (currentUser){
         display = { 
@@ -21,9 +21,9 @@ export default ({ currentUser, logout, openModal }) => {
     return (
         <div className="top-bar">
         <header className="nav-bar">
-            <p><Link to="/home"><img className="logo" src="/assets/cloud.png" alt="LoudCloud" /></Link></p>
-            <div className="nav-links"><Link to="/playlists">Playlists</Link></div>
-                <div ><Link to="/songs"><button className="nav-links" onClick={() => openModal('Upload')}>Upload</button></Link></div>
+            <p><Link to="/"><img className="logo" src="/assets/cloud.png" alt="LoudCloud" /></Link></p>
+            <div className="nav-links"><Link to="/songs">Library</Link></div>
+                <div ><Link to="/songs"><button className="nav-links" onClick={() => openModal('Upload')}>Playlists</button></Link></div>
             <p className="nav-links"> <input className="search-bar" type="text" spellCheck="false" ></input><button className="search-button">Search LoudCloud</button></p>
             <div>{display.link1}</div>
             <div>{display.link2}</div>

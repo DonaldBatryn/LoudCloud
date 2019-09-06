@@ -1,4 +1,11 @@
 
+export const fetchUsers = () => (
+    $.ajax({
+        method: 'GET',
+        url: `api/users`
+    })
+)
+
 export const fetchUser = id => (
     $.ajax({
         method: 'GET',
@@ -9,7 +16,11 @@ export const fetchUser = id => (
 export const search = query => (
     $.ajax({
         method: 'GET',
-        url: `api/users/search`
+        url: `api/users/search`,
+        dataType: 'json',
+        data: {
+            query: `${query}`
+        }
     })
 )
 

@@ -21,3 +21,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.main-body {
+  display: flex;
+  flex-direction: row;
+}

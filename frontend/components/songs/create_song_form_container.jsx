@@ -11,7 +11,7 @@ const msp = state => {
             album_name: "",
             artist: "",
             description: "",
-            songUrl: "",
+            audio: "",
             user_id: state.session.id
         },
         formType: "Upload song",

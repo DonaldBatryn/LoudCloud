@@ -6,6 +6,7 @@ class SongForm extends React.Component{
         super(props)
         this.state = this.props.song
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleFile = this.handleFile.bind(this)
     }
 
     handleInput(field){
@@ -14,16 +15,54 @@ class SongForm extends React.Component{
         }
     }
 
-    handleSubmit(e){
-        e.preventDefault();
-        this.props.processSong(this.state).then(() => {
-            if (this.props.errors.length > 0){
-                return
-            }else{
-                this.props.closeModal()
-            }
+    
+
+    // handleSubmit(e){
+    //     e.preventDefault();
+    //     this.props.processSong(this.state).then(() => {
+    //         if (this.props.errors.length > 0){
+    //             return
+    //         }else{
+    //             this.props.closeModal()
+    //         }
+    //     })
+    // }
+
+    handleSubmit(){
+        if (!this.state.title){
+            this.setState({noTitle: true})
+            return
+        }
+
+        const formData = new FormData();
+        formData.append('song[user_id]', this.state.user_id)
+        formData.append('song[title]', this.state.title)
+        if (this.state.picture) {
+            formData.append('song[image]', this.state.image)
+        }
+        formData.append('song[audio]', this.state.audio)
+        formData.append('song[description]', this.state.description)
+
+        this.setState({uploading: true})
+
+        this.props.upload(formData).then(result => this.props.history.push('/songs/${result.song.song.id}'),
+                            err => this.setState({uploading: false}) );
+    }
+
+    handleCancel(){
+        this.setState({
+            user_id: this.props.currentUser.id,
+            title: "",
+            picture: null,
+            song: null,
+            description: "",
+            uploading: false
         })
     }
+
+    // handleSongFile(e){
+    //     const song
+    // }
 
     componentWillUnmount(){
         this.props.clearErrors()
@@ -40,7 +79,7 @@ class SongForm extends React.Component{
         err = err.join(", ")
         return (
             <div className="modal is-open" >
-                <form className="modal-form" onSubmit={this.handleSubmit}>
+                <form id="song-form" className="modal-form" onSubmit={this.handleSubmit}>
                     {/* <label className="instruction">Please {type} to continue to LoudCloud</label> */}
                     <div className="errors">{err}</div>
                 
@@ -64,6 +103,9 @@ class SongForm extends React.Component{
                     {/* input for mp3 */}
 
                     <div id="submit-container">
+                      
+                        <input type="file" name="song[:audio]" onChange={this.handleFile}/>
+                    
                         <input className="submit" type="submit" value={type} />
 
                     </div>

@@ -6,15 +6,17 @@
     margin-top: 100px;
     margin-bottom: 100px;
     margin-left: 30px;
-    width: 700px;
+    width: 66%;
     height: 800px;
-    background-color: gray;
+    // background-color: gray;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; 
     align-items: center;
     font-family: "Interstate","Lucida Grande",Arial,sans-serif;
+    min-width: 700px;
+    max-width: 800px;
 }
 
 
@@ -24,15 +26,15 @@
     justify-content: space-evenly;
     width: 98%;
     height: 25%;
-    background-color: pink;
+    // background-color: pink;
     border-radius: 3px;
 }
 
 .catagory-text {
     height: 25%;
     width: 98%;
-    background-color: gray;
-    color: whitesmoke;
+    // background-color: gray;
+    color: gray;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -48,21 +50,21 @@
     height: 80%;
     width: 100%;
     // padding: 10%;
-    background-color: bisque;
+    background-color: lightgray;
     border-radius: 3px;
 }
 
 .song {
     width: 20%;
     height: 90%;
-    background-color: gray;
+    background-color: whitesmoke;
     transition: all 0.3s ease 0s;
     border-radius: 3px;
     // border-radius: 6px;
 }
 
 .song:hover{
-    background-color: rgba(128, 128, 128, 0.9);
+    background-color: rgba(128, 128, 128, 0.5);
     // width: 19.5%;
     // height: 89%;
 }
