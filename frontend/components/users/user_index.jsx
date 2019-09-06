@@ -8,11 +8,13 @@ class UserIndex extends React.Component{
     }
 
     componentDidMount(){
+        console.log(this.props)
         this.props.fetchUsers()
     }
 
     render(){
-        let users1 = this.props.users
+        let userIds = Object.keys(this.props.users)
+        console.log(userIds)
         debugger
         return (
             <div className="user-main">
