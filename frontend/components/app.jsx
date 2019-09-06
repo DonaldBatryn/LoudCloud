@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils'
 import NavBarContainer from './navbar/navbar_container'
-import UserIndex from './users/user_index'
+import UserIndexContainer from './users/user_index_container'
 import SplashContainer from './splash/splash_container'
 import PlayBarContainer from './playbar/playbar_container'
 import Modal from './modal/modal'
@@ -15,7 +15,7 @@ const App = () => {
             <Route path="/" component={NavBarContainer} />
             <AuthRoute path="/" component={SplashContainer} />
             <ProtectedRoute path="/" component={CatagoryIndex}/>
-            <ProtectedRoute path="/" component={UserIndex}/>
+            <ProtectedRoute path="/" component={UserIndexContainer}/>
             <Route path="/" component={PlayBarContainer} />
         </div>
     )
