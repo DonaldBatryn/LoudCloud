@@ -3,8 +3,8 @@ class Song < ApplicationRecord
     validates :title, uniqueness: { scope: :album_name,
     message: "Album can't have the same song title twice" }
 
-    # has_one_attached :audio
-    # has_one_attached :image
+    has_one_attached :audio
+    has_one_attached :image
 
     belongs_to :user,
     foreign_key: :user_id,
