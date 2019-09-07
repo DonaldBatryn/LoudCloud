@@ -8,7 +8,7 @@
     "test": "test"
   },
   "engines": {
-    "node": "10.15.0",
+    "node": "10.13.0",
     "npm": "6.4.1"
   },
   "scripts": {
@@ -34,6 +34,7 @@
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
     "heroku": "^7.29.0",
+    "heroku-cli": "^7.0.9",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-player": "^1.12.0",
