@@ -12,7 +12,6 @@
     "npm": "6.4.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "webpack",
     "webpack": "webpack --mode=development --watch"
   },
@@ -29,6 +28,7 @@
   "homepage": "https://github.com/DonaldBatryn/LoudCloud#readme",
   "dependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
@@ -40,12 +40,11 @@
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
   },
-  "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.5.5"
-  }
+  "devDependencies": {}
 }

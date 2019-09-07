@@ -12,7 +12,7 @@ class User < ApplicationRecord
     has_many :comments
     has_many :playlists
     
-    has_one_attached :image
+    # has_one_attached :image
 
     
     def self.find_by_credentials(username, password)
