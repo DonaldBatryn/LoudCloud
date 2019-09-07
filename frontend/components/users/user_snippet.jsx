@@ -19,6 +19,7 @@ class UserSnippet extends React.Component{
             <Link className="user-link" to={`/users/${this.props.user.id}`} ><div className="user-snip">
                 <img className="user-thumb" src={window.cloud} alt={this.props.user.username} />
                 <h4 className="name">{this.props.user.username}</h4>
+                <h6 className="num-tracks">{this.props.user.songs.length} tracks</h6>
             </div></Link>
         )
     }
