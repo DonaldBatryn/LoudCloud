@@ -20,7 +20,7 @@ class Api::SongsController < ApplicationController
   end
 
   def update
-    @song = Song.find(params[:id])
+    @song = current_user.songs.find(params[:id])
   end
 
   def destroy

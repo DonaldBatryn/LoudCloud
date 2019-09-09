@@ -13,12 +13,14 @@ class UserShow extends React.Component{
             return <div className="main-user-show"></div>
         }
 
-        let { username, created_at, playlists } = this.props.user
+        let { username, created_at, playlists, id } = this.props.user
         let showBody
         if (this.props.user.playlists.length > 0){
             showBody = this.props.user.playlists.map(playlist => {
                 return <PlaylistPreview key={playlist.id} playlist={playlist} />
             })
+        }else if (id === this.props.currentUser){
+            showBody = <div className="playlist-blank">"You don't have any playlists yet."</div>
         } else {
             showBody = <div className="playlist-blank">"This user doesn't have any playlists yet."</div>
         }

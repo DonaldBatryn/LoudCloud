@@ -23,11 +23,11 @@ class Api::PlaylistsController < ApplicationController
 
 
     def show
-        @playlist = current_user.playlists.find(params[:id])
+        @playlist = Playlist.find(params[:id])
     end
 
     def index   
-        @playlists = current_user.playlists
+        @playlists = Playlist.all
     end
 
     def destroy

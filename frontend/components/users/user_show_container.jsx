@@ -6,6 +6,7 @@ const msp = (state, ownProps) => {
     let user = state.entities.users[ownProps.match.params.userId]
    
     return ({
+        currentUser: state.session.id,
         user: user
     })
 }
