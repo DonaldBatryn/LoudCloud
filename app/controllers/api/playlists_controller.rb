@@ -21,6 +21,7 @@ class Api::PlaylistsController < ApplicationController
         end
     end
 
+
     def show
         @playlist = current_user.playlists.find(params[:id])
     end

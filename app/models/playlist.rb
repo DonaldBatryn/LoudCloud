@@ -10,11 +10,11 @@ class Playlist < ApplicationRecord
 
     has_many :songs,
     through: :playlist_songs,
-    source: :songs
+    source: :song
 
     belongs_to :user,
     foreign_key: :user_id,
     class_name: :User
 
-    # has_one_attached :image
+    has_one_attached :image
 end

@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   
- 
-  
-  
   root to: "static_pages#root"
   
   namespace :api, defaults: { format: :json } do
@@ -18,8 +15,8 @@ Rails.application.routes.draw do
     
     resources :playlists, only: [:create, :show, :update, :destroy, :index] do
       resources :comments, only: [:create, :destroy]
+      resources :playlist_songs, only: [:create, :destroy]
     end
-    resources :playlist_songs, only: [:create, :index, :show, :destroy]
   end
   
   

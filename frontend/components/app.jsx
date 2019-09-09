@@ -9,6 +9,7 @@ import PlayBarContainer from './playbar/playbar_container'
 import Modal from './modal/modal'
 import CatagoryIndexContainer from './catagories/catagory_index';
 import UserShowContainer from './users/user_show_container'
+import PlaylistShowContainer from './playlists/playlist_show_container'
 
 const App = () => {
    
@@ -19,7 +20,8 @@ const App = () => {
             <AuthRoute path="/" component={SplashContainer} />
             <Route exact path="/" component={CatagoryIndexContainer}/>
             <ProtectedRoute path="/" component={UserIndexContainer}/>
-            <ProtectedRoute path="/playlists" component={PlaylistIndexContainer}/>
+            <Route exact path="/playlists" component={PlaylistIndexContainer}/>
+            <Route path="/playlists/:playlistId" component={PlaylistShowContainer} />
             <Route path="/users/:userId" component={UserShowContainer}/>
             <Route path="/" component={PlayBarContainer} />
         </div>

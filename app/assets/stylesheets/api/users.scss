@@ -88,7 +88,7 @@
     margin-left: 15px;
 }
 
-.num-tracks {
+.num-playlists {
     margin-left: 30px;
     // margin-top: 20px;
 }
@@ -116,13 +116,13 @@
     max-width: 1000px;
     order: 1;
     color: gray;
-    background-color: pink;
+    // background-color: pink;
 }
 
 .user-box{
     width: 96%;
     height: 96%;
-    background-color: orange;
+    // background-color: orange;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
@@ -133,7 +133,7 @@
     margin-top: 10px;
     width: 98%;
     height: 20%;
-    background-color: yellow;
+    // background-color: yellow;
     display: flex;
     flex-direction: row;
     justify-content: space-around; 
@@ -143,13 +143,13 @@
 .show-thumb{
     height: 97%;
     width: auto;
-    background-color: green;
+    // background-color: green;
 }
 
 .deets{
     height: 97%;
     width: 68%;
-    background-color: lightblue;
+    // background-color: lightblue;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; 
