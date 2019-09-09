@@ -3,11 +3,15 @@ import UserIndex from './user_index'
 import { fetchUsers } from '../../actions/user_actions'
 
 const msp = state => {
+    let users = []
+    Object.keys(state.entities.users).forEach(id => {
+        if (id !== state.session.id) {
+            users.push(state.entities.users[id])
+        }
+    })
     return ({
         currentUser: state.entities.users[state.session.id],
-        users: Object.keys(state.entities.users).map(id => state.entities.users[id])
-        
-        
+        users: users
     })
 }
 

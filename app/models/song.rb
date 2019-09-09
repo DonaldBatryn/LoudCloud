@@ -10,13 +10,13 @@ class Song < ApplicationRecord
     foreign_key: :user_id,
     class_name: :User
 
-    has_many :playlist_songs,
-    foreign_key: :song_id,
-    class_name: :PlaylistSong
+    # has_many :playlist_songs,
+    # foreign_key: :song_id,
+    # class_name: :PlaylistSong
 
-    has_many :playlists,
-    through: :playlist_songs,
-    source: :playlist
+    # has_many :playlists,
+    # through: :playlist_songs,
+    # source: :playlist
 
    
 end

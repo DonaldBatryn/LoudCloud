@@ -14,7 +14,7 @@ class UserSnippet extends React.Component{
     }
 
     render(){
-        let pluralize = this.props.user.songs.length === 1 ? "Playlist" : "Playlists"
+        let pluralize = this.props.user.playlists.length === 1 ? "Playlist" : "Playlists"
         return (
             <Link className="user-link" to={`/users/${this.props.user.id}`} ><div className="user-snip">
                 <img className="user-thumb" src={window.cloud} alt={this.props.user.username} />

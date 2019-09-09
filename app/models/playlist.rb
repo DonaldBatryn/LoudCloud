@@ -4,13 +4,13 @@ class Playlist < ApplicationRecord
     message: "Can't have two playlists with the same name"}
 
 
-    has_many :playlist_songs,
-    foreign_key: :playlist_id,
-    class_name: :PlaylistSong
+    # has_many :playlist_songs,
+    # foreign_key: :playlist_id,
+    # class_name: :PlaylistSong
 
-    has_many :songs,
-    through: :playlist_songs,
-    source: :song
+    # has_many :songs,
+    # through: :playlist_songs,
+    # source: :song
 
     belongs_to :user,
     foreign_key: :user_id,
