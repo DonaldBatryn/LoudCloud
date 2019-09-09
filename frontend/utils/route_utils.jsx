@@ -8,18 +8,20 @@ const msp = state => ({
 
 
 
-const Auth = ({ loggedIn, path, component: Component }) => (
+const Auth = ({ loggedIn, path, component: Component, exact }) => (
     <Route
         path={path}
+        exact={exact}
         render={props => (
-            loggedIn ? <Redirect to="/" /> : <Component {...props} />
+            loggedIn ? <Redirect to="/home" /> : <Component {...props} />
         )}
     />
 );
 
-const Protected = ({ loggedIn, path, component: Component }) => (
+const Protected = ({ loggedIn, path, component: Component, exact }) => (
     <Route
         path={path}
+        exact={exact}
         render={props => (
             loggedIn ? <Component {...props} /> : <Redirect to="/signup" />
         )}

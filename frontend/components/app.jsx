@@ -17,12 +17,12 @@ const App = () => {
         <div className="main-body">
             <Modal />
             <Route path="/" component={NavBarContainer} />
-            <AuthRoute path="/" component={SplashContainer} />
-            <Route exact path="/" component={CatagoryIndexContainer}/>
+            <AuthRoute exact path="/" component={SplashContainer} />
+            <ProtectedRoute exact path="/home" component={CatagoryIndexContainer}/>
             <ProtectedRoute path="/" component={UserIndexContainer}/>
-            <Route exact path="/playlists" component={PlaylistIndexContainer}/>
-            <Route path="/playlists/:playlistId" component={PlaylistShowContainer} />
-            <Route path="/users/:userId" component={UserShowContainer}/>
+            <ProtectedRoute exact path="/playlists" component={PlaylistIndexContainer}/>
+            <ProtectedRoute path="/playlists/:playlistId" component={PlaylistShowContainer} />
+            <ProtectedRoute path="/users/:userId" component={UserShowContainer}/>
             <Route path="/" component={PlayBarContainer} />
         </div>
     )

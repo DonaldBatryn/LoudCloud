@@ -21,7 +21,7 @@ export default ({ currentUser, logout, openModal }) => {
     return (
         <div className="top-bar">
         <header className="nav-bar">
-            <p><Link to="/"><img className="logo" src="/assets/cloud.png" alt="LoudCloud" /></Link></p>
+            <p><Link to="/home"><img className="logo" src="/assets/cloud.png" alt="LoudCloud" /></Link></p>
             <div className="nav-links"><Link to="/songs">Library</Link></div>
             <div className="nav-links"><Link to="/playlists">Playlists</Link></div>
             <p className="nav-links"> <input className="search-bar" type="text" spellCheck="false" ></input><button className="search-button">Search LoudCloud</button></p>

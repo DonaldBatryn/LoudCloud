@@ -10,12 +10,12 @@ export const CLEAR_PLAYLIST_ERRORS = "CLEAR_PLAYLIST_ERRORS"
 
 
 const receivePlaylists = (playlists) => ({
-    type: RECEIVE_SONGS,
+    type: RECEIVE_PLAYLISTS,
     playlists
 })
 
 const receivePlaylist = (playlist) => ({
-    type: RECEIVE_SONG,
+    type: RECEIVE_PLAYLIST,
     playlist
 })
 
@@ -39,27 +39,27 @@ const clearPlaylistErrors = () => ({
 
 
 export const createPlaylist = playlist => dispatch => (
-    SongAPIUtil.createPlaylist(playlist).then(playlist => dispatch(receivePlaylist(playlist)),
+    PlaylistAPIUtil.createPlaylist(playlist).then(playlist => dispatch(receivePlaylist(playlist)),
         err => dispatch(receivePlaylistErrors(err.responseJSON)))
 )
 
 export const fetchPlaylist = id => dispatch => (
-    SongAPIUtil.fetchPlaylist(id).then(playlist => dispatch(receivePlaylist(playlist)),
+    PlaylistAPIUtil.fetchPlaylist(id).then(playlist => dispatch(receivePlaylist(playlist)),
         err => dispatch(receivePlaylistErrors(err.responseJSON)))
 )
 
 export const fetchPlaylists = () => dispatch => (
-    SongAPIUtil.fetchPlaylists().then(playlists => dispatch(receivePlaylists(playlists)),
+    PlaylistAPIUtil.fetchPlaylists().then(playlists => dispatch(receivePlaylists(playlists)),
         err => dispatch(receivePlaylistErrors(err.responseJSON)))
 )
 
 export const updatePlaylist = song => dispatch => (
-    SongAPIUtil.updatePlaylist(playlist).then(playlist => dispatch(receivePlaylist(playlist)),
+    PlaylistAPIUtil.updatePlaylist(playlist).then(playlist => dispatch(receivePlaylist(playlist)),
         err => dispatch(receivePlaylistErrors(err.responseJSON)))
 )
 
 export const deletePlaylist = id => dispatch => (
-    SongAPIUtil.deletePlaylist(id).then(id => dispatch(removePlaylist(id)),
+    PlaylistAPIUtil.deletePlaylist(id).then(id => dispatch(removePlaylist(id)),
         err => dispatch(receivePlaylistErrors(err.responseJSON)))
 )
 
