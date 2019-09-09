@@ -9,13 +9,14 @@ class SongIndex extends React.Component{
 
     render(){
         let allSongs = this.props.songs.map(song => {
-            return <div className="song-index-item" ><SongPreview key={song.id} song={song} /></div>
+            return <div className="song-index-item" ><SongPreview key={`song-${song.id}`} song={song} /></div>
         })
         return (
             <div className="main-song-index">
                 <div className="song-index-header">
-                    <h3>Check out LoudCloud Users'</h3>
+                    <h3 className="sub-header">Check out LoudCloud Users'</h3>
                     <h1> Favorite Donnie Tracks </h1>
+                    <div className="line"></div>
                 </div>
                 {allSongs}
             </div>
