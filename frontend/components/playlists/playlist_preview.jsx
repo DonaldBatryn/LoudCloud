@@ -8,7 +8,7 @@ class PlaylistPreview extends React.Component {
         return (
             <div className="playlist-preview">
                 <Link className="playlist-preview" to={`/playlists/${this.props.playlist.id}`}>
-                    <img className="play-prev-thumb" src="/assets/cloud.png" />
+                    <img className="play-prev-thumb" src={window.cloud} />
                     <h3>{this.props.playlist.title}</h3>
                     <h4>{formatDate(this.props.playlist.created_at)}</h4>
                 </Link>

@@ -85,6 +85,7 @@
     margin-left: 30px;
     width: 66%;
     height: auto;
+    color: gray;
     background-color: gray;
     border-radius: 3px;
     display: flex;
@@ -98,10 +99,14 @@
 }
 
 .song-index-header{
-    margin-top: 10px;
+    margin: 10px 0;
     width: 98%;
-    height: 150px;
+    height: 100px;
     background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
 }
 
 .song-index-item{

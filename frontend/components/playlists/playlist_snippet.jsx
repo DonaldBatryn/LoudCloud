@@ -5,7 +5,7 @@ class PlaylistSnippet extends React.Component{
     render(){
         return (
             <div className="playlist-snip">
-                <img className="pl-image" src="/assets/cloud.png" />
+                <img className="pl-image" src={window.cloud} />
                 <div className="pl-info">
                     <h3>Playlist Title</h3>
                     {/* <h3>{this.props.playlist.title}</h3> */}

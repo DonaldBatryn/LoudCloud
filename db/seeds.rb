@@ -50,7 +50,7 @@ Playlist.create!(title: "Mellow Yellow Donovan Tribute", user_id: 7, song_ids: [
 Playlist.create!(title: "They Might Be Giant....Hits!!", user_id: 2, song_ids: [16, 13, 1, 5])
 Playlist.create!(title: "Vaudevillian Discotheque Villains", user_id: 3, song_ids: [14, 2, 3, 10])
 Playlist.create!(title: "Noir Pop", user_id: 3, song_ids: [7, 4, 5, 9])
-Playlist.create!(title: "Anger Managment Classical Music", user_id: 4, song_ids: [8, 6, 11, 12])
+Playlist.create!(title: "Anger Management Classical Music", user_id: 4, song_ids: [8, 6, 11, 12])
 Playlist.create!(title: "Popular Mechanics for Math Rock Enthusiasts", user_id: 4, song_ids: [13, 9, 4, 10])
 Playlist.create!(title: "Martha Stewart's Favorites", user_id: 5, song_ids: [2, 12, 6])
 Playlist.create!(title: "The Rutles Greatest Hits", user_id: 6, song_ids: [7, 8, 14])

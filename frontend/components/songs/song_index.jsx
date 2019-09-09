@@ -13,7 +13,10 @@ class SongIndex extends React.Component{
         })
         return (
             <div className="main-song-index">
-                <div className="song-index-header"></div>
+                <div className="song-index-header">
+                    <h3>Check out LoudCloud Users'</h3>
+                    <h1> Favorite Donnie Tracks </h1>
+                </div>
                 {allSongs}
             </div>
         )
