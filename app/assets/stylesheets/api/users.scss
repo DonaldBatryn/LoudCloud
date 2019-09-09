@@ -11,7 +11,7 @@
     margin-left: 50px;
     // background-color: pink;
     min-width: 400px;
-    
+    order: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -80,7 +80,7 @@
 }
 
 .user-link:hover{
-    background-color: lightgray;
+    background-color: rgba(128, 128, 128, 0.2);
     color: orange;
 }
 
@@ -96,4 +96,62 @@
 .user-thumb {
     width: auto;
     height: 50px;
+}
+
+// USER SHOW // 
+
+.main-user-show {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+    width: 66%;
+    height: 900px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: center;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
+    min-width: 700px;
+    max-width: 1000px;
+    order: 1;
+    color: gray;
+    background-color: pink;
+}
+
+.user-box{
+    width: 96%;
+    height: 96%;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+.user-info{
+    margin-top: 10px;
+    width: 98%;
+    height: 20%;
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.show-thumb{
+    height: 97%;
+    width: auto;
+    background-color: green;
+}
+
+.deets{
+    height: 97%;
+    width: 68%;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: left;
 }

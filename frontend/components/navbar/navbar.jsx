@@ -23,7 +23,7 @@ export default ({ currentUser, logout, openModal }) => {
         <header className="nav-bar">
             <p><Link to="/"><img className="logo" src="/assets/cloud.png" alt="LoudCloud" /></Link></p>
             <div className="nav-links"><Link to="/songs">Library</Link></div>
-                <div ><Link to="/songs"><button className="nav-links" onClick={() => openModal('Upload')}>Playlists</button></Link></div>
+            <div className="nav-links"><Link to="/playlists">Playlists</Link></div>
             <p className="nav-links"> <input className="search-bar" type="text" spellCheck="false" ></input><button className="search-button">Search LoudCloud</button></p>
             <div>{display.link1}</div>
             <div>{display.link2}</div>

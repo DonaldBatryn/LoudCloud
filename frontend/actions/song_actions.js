@@ -53,7 +53,7 @@ const receiveRouteErrors = errors => ({
     errors
 })
 
-const clearRouteErrors = errors => ({
+const clearRouteErrors = () => ({
     type: CLEAR_ROUTE_ERRORS
 })
 

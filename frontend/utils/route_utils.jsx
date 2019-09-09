@@ -6,7 +6,7 @@ const msp = state => ({
     loggedIn: Boolean(state.session.id)
 });
 
-// <AuthRoute path="" component={} />
+
 
 const Auth = ({ loggedIn, path, component: Component }) => (
     <Route

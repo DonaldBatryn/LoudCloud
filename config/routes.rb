@@ -16,7 +16,9 @@ Rails.application.routes.draw do
       resources :comments, only: [:create, :destroy]
     end
     
-    resources :playlists, only: [:create, :show, :update, :destroy, :index]
+    resources :playlists, only: [:create, :show, :update, :destroy, :index] do
+      resources :comments, only: [:create, :destroy]
+    end
     resources :playlist_songs, only: [:create, :index, :show, :destroy]
   end
   

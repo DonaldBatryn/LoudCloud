@@ -23,7 +23,7 @@ export const uploadSong = (song) => (
 
 export const updateSong = (song) => (
     $.ajax({
-        method: 'GET',
+        method: 'PATCH',
         url: `api/songs/${song.id}`,
         data: { song }
     })
@@ -31,7 +31,7 @@ export const updateSong = (song) => (
 
 export const deleteSong = (id) => (
     $.ajax({
-        method: 'GET',
+        method: 'DELETE',
         url: `api/songs/${id}`
     })
 )
