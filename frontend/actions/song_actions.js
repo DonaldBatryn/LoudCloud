@@ -70,6 +70,11 @@ export const upload = song => dispatch => (
     err => dispatch(receiveUploadErrors(err.responseJSON)))
 )
 
+export const fetchSongs = () => dispatch => (
+    SongAPIUtil.fetchSongs().then(songs => dispatch(receiveSongs(songs)),
+        err => dispatch(receiveRouteErrors(err.responseJSON)))
+)
+
 export const fetchSong = id => dispatch => (
     SongAPIUtil.fetchSong(id).then(song => dispatch(receiveSong(song)),
         err => dispatch(receiveUploadErrors(err.responseJSON)))

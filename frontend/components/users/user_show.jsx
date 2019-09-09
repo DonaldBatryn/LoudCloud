@@ -5,13 +5,14 @@ import PlaylistPreview from '../playlists/playlist_preview'
 class UserShow extends React.Component{
     constructor(props){
         super(props)
-       
     }
-    componentDidMount(){
-       
-    }
+   
 
     render(){
+        if (!(this.props.user)){
+            return <div className="main-user-show"></div>
+        }
+
         let { username, created_at, playlists } = this.props.user
         let showBody
         if (this.props.user.playlists.length > 0){

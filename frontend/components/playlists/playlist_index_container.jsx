@@ -5,7 +5,7 @@ import { fetchPlaylists } from '../../actions/playlist_actions'
 const msp = state => {
     return ({
         currentUser: state.entities.users[state.session.id],
-        // playlists: Object.keys(state.entities.playlists).map(id => state.entities.playlists[id])
+        playlists: Object.keys(state.entities.playlists).map(id => state.entities.playlists[id])
 
 
     })

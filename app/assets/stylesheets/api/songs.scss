@@ -77,5 +77,36 @@
     // height: 89%;
 }
 
-// SONG SNIPPET
+// SONG INDEX 
 
+.main-song-index{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+    width: 66%;
+    height: auto;
+    background-color: gray;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
+    min-width: 700px;
+    max-width: 1000px;
+    order: 1;
+}
+
+.song-index-header{
+    margin-top: 10px;
+    width: 98%;
+    height: 150px;
+    background-color: yellow;
+}
+
+.song-index-item{
+    margin: 10px 0;
+    width: 98%;
+    height: 100px;
+    background-color: pink;
+}

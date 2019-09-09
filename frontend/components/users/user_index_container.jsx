@@ -9,6 +9,7 @@ const msp = state => {
             users.push(state.entities.users[id])
         }
     })
+    
     return ({
         currentUser: state.entities.users[state.session.id],
         users: users

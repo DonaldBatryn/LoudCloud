@@ -10,6 +10,7 @@ import Modal from './modal/modal'
 import CatagoryIndexContainer from './catagories/catagory_index';
 import UserShowContainer from './users/user_show_container'
 import PlaylistShowContainer from './playlists/playlist_show_container'
+import SongIndexContainer from './songs/song_index_container'
 
 const App = () => {
    
@@ -22,6 +23,7 @@ const App = () => {
             <ProtectedRoute path="/" component={UserIndexContainer}/>
             <ProtectedRoute exact path="/playlists" component={PlaylistIndexContainer}/>
             <ProtectedRoute path="/playlists/:playlistId" component={PlaylistShowContainer} />
+            <ProtectedRoute exact path="/songs" component={SongIndexContainer}/>
             <ProtectedRoute path="/users/:userId" component={UserShowContainer}/>
             <Route path="/" component={PlayBarContainer} />
         </div>

@@ -12,15 +12,21 @@ class Api::SongsController < ApplicationController
   end
 
   def show
+    @song = Song.find(params[:id])
   end
 
   def index
+    @songs = Song.all
   end
 
   def update
+    @song = Song.find(params[:id])
   end
 
   def destroy
+    @song = current_user.songs.find(params[:id])
+    @song.destroy
+    render json: ["Song has been deleted"]
   end
   
   def song_params

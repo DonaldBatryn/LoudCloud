@@ -10,12 +10,15 @@ class UserIndex extends React.Component{
     }
     
     render(){
-     
         const { users } = this.props
-        let first = users.slice(1, 4)
-        let second = users.slice(4, 7)
-        let third = users.slice(7, 10)
-      
+        let otherUsers;
+        otherUsers = users.filter(user => {
+            return (user.id !== this.props.currentUser.id )&& (user.id !== 1)
+        })
+       
+        let first = otherUsers.slice(0, 3)
+        let second = otherUsers.slice(3, 6)
+        let third = otherUsers.slice(6, 9)
         return (
             <div className="user-main">
                 <UserIndexItem users={ first } item={"Who To Follow"}/>
