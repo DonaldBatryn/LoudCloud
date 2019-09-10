@@ -9,9 +9,9 @@ class SongIndexItem extends React.Component {
     render(){
         return (
         <div className="song">
-            <Link to={`/songs/${this.props.songId}`}>
+            {/* <Link to={`/songs/${this.props.songId}`}> */}
                 <img src={window.cloud} />
-            </Link>
+            {/* </Link> */}
         </div>
         )
     }

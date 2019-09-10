@@ -1,6 +1,7 @@
-import React from 'react'
-import { formatDate } from '../../utils/date_util'
-import PlaylistPreview from '../playlists/playlist_preview'
+import React from 'react';
+import { formatDate } from '../../utils/date_util';
+import PlaylistPreview from '../playlists/playlist_preview';
+import { Link } from 'react-router-dom';
 
 class UserShow extends React.Component{
     constructor(props){
@@ -20,15 +21,20 @@ class UserShow extends React.Component{
         }
 
         let { username, created_at, playlists, id } = this.props.user
-        let showBody
+        let showBody;
+        let createLink = "";
         if (this.props.user.playlists.length > 0){
             showBody = this.props.user.playlists.map(playlist => {
-                return <PlaylistPreview key={playlist.id} playlist={playlist} />
+                return <PlaylistPreview key={playlist.id} playlist={playlist} deletePlaylist={this.props.deletePlaylist}/>
             })
         }else if (id === this.props.currentUser){
             showBody = <div className="playlist-blank">"You don't have any playlists yet."</div>
         } else {
             showBody = <div className="playlist-blank">"This user doesn't have any playlists yet."</div>
+        }
+        
+        if (id === this.props.currentUser){
+            createLink = <Link className="create-pl-link" to="/playlists/new"><h2>Create a New Playlist</h2></Link>
         }
 
         let pluralize = this.props.user.playlists.length === 1 ? "Playlist" : "Playlists"
@@ -45,6 +51,7 @@ class UserShow extends React.Component{
                         </div>
                     </div>
                     {showBody}
+                    {createLink}
                 </div>
             </div>
         )

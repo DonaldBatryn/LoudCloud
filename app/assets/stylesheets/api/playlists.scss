@@ -92,14 +92,24 @@ a.playlist-preview{
     margin: 15px 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     transition: all 0.3s ease-in-out;
 }
 
 a.playlist-preview:hover{
-    background-color: rgba(128, 128, 128, 0.2);
+    // background-color: rgba(128, 128, 128, 0.2);
+    background-color: white;
     color: orange;
+}
+
+.pl-title-box{
+    width: 250px;
+    height: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
 }
 
 .playlist-blank{
@@ -115,6 +125,21 @@ a.playlist-preview:hover{
 .play-prev-thumb{
     height: 60px;
     width: auto;
+}
+
+.delete-pl-button{
+   
+    width: 140px;
+    height: 35px;
+    // background-color: whitesmoke;
+    color: gray;
+    transition: all 0.3s ease-in-out;
+}
+
+.delete-pl-button:hover{
+    color: orange;
+    border: 2px solid orange;
+    // background-color: white;
 }
 
 // PLAYLIST SHOW
@@ -216,4 +241,85 @@ a.playlist-preview:hover{
 .pl-song-info:hover{
     color: orange;
     background-color: white;
+}
+
+.create-pl-link{
+    margin-top: 20px;
+    background-color: whitesmoke;
+    width: 200px;
+    height: 50px;
+    border-radius: 7px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.create-pl-link:hover{
+    border: 2px solid orange;
+    color:orange;
+    background-color: white;
+}
+
+// NEW PLAYLIST FORM
+
+.new-pl-main{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 90%;
+    height: 400px;
+    background-color: gray;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: center;
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
+    min-width: 700px;
+    max-width: 1000px;
+    order: 1;
+    color: gray;
+}
+
+.new-pl-form{
+    width: 80%;
+    height: 90%;
+    background-color: pink;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.pl-errors{
+
+}
+
+.pl-title{
+    width: 200px;
+    margin-left: 18px;
+
+}
+
+
+
+.pl-create-button{
+    margin-bottom: 15px;
+    width: 160px;
+    height: 35px;
+    background-color: whitesmoke;
+    color: gray;
+}
+
+.pl-create-button:hover{
+    color: orange;
+    background-color: white;
+}
+
+.pl-label{
+    font-size: 30px;
 }
