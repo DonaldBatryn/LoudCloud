@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 class PlaylistSnippet extends React.Component{
 
     render(){
-        if (!(this.props.playlist)) {
-            return <div className="playlist-snip"></div>
-        }
         let { playlist, author } = this.props
+        if (!playlist || !author){
+            return <div>Loading...</div>
+        }
         return (
             <div className="playlist-snip">
                 <img className="pl-image" src={window.cloud} />

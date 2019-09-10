@@ -6,6 +6,12 @@ class UserShow extends React.Component{
     constructor(props){
         super(props)
     }
+
+    componentDidMount(){
+        // this.props.fetchUsers();
+        this.props.fetchPlaylists();
+        this.props.fetchSongs();
+    }
    
 
     render(){

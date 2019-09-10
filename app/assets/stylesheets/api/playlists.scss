@@ -125,7 +125,7 @@ a.playlist-preview:hover{
     margin-left: 30px;
     width: 66%;
     height: 900px;
-    background-color: gray;
+    background-color: whitesmoke;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
@@ -142,14 +142,35 @@ a.playlist-preview:hover{
     margin-top: 7px;
     height: 25%;
     width: 98%;
-    background-color: pink;
+    // background-color: pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+}
 
+.pl-show-image{
+
+    height: 98%;
+    width: auto;
+}
+
+.pl-show-text{
+    height: 98%;
+    width: 65%;
+    // background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
 }
 
 .pl-songs-box{
     height: 70%;
     width: 98%;
-    background-color: yellow;
+    // background-color: yellow;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -158,11 +179,41 @@ a.playlist-preview:hover{
 
 .pl-song{
     width: 98%;
-    height: 66px;
-    background-color: lightblue;
+    height: 80px;
+    // background-color: lightblue;
     margin: 6px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.song-snip{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pl-song-image{
+    height: 98%;
+    width: auto;
+    // background-color: red;
+}
+
+.pl-song-info{
+    height: 98%;
+    width: 80%;
+    // background-color: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.pl-song-info:hover{
+    color: orange;
+    background-color: white;
 }
