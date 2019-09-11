@@ -1,5 +1,6 @@
 import React from 'react'
 import PlaylistSnippet from './playlist_snippet'
+import { Link } from 'react-router-dom';
 
 class PlaylistIndexItem extends React.Component{
 
@@ -13,10 +14,11 @@ class PlaylistIndexItem extends React.Component{
             return <div className="playlist-index-item"></div>
         }
         return (
+           
             <div className="playlist-index-item">
                 <PlaylistSnippet playlist={this.props.playlist} author={this.props.author} />
-                {/* <h3>PlaylistSnippet</h3> */}
             </div>
+            
         )
     }
 }

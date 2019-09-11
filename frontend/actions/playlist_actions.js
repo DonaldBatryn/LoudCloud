@@ -53,7 +53,7 @@ export const fetchPlaylists = () => dispatch => (
         err => dispatch(receivePlaylistErrors(err.responseJSON)))
 )
 
-export const updatePlaylist = song => dispatch => (
+export const updatePlaylist = playlist => dispatch => (
     PlaylistAPIUtil.updatePlaylist(playlist).then(playlist => dispatch(receivePlaylist(playlist)),
         err => dispatch(receivePlaylistErrors(err.responseJSON)))
 )

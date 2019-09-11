@@ -40,6 +40,7 @@ class NewPlaylistForm extends React.Component{
             <div className="new-pl-main">
                 <form className="new-pl-form" onSubmit={this.handleSubmit}>
                     <div className="pl-errors">{err}</div>
+                    <h2 className="pl-label">Name Your Playlist</h2>
                     <label className="pl-label" htmlFor="pl-title">Title:&nbsp;&nbsp;&nbsp;  
                         <input id="pl-title" type="text" 
                             onChange={this.handleInput('title')} value={this.state.title} />

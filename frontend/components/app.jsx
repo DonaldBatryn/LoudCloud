@@ -12,6 +12,7 @@ import UserShowContainer from './users/user_show_container'
 import PlaylistShowContainer from './playlists/playlist_show_container'
 import SongIndexContainer from './songs/song_index_container'
 import NewPlaylistFormContainer from './playlists/new_playlist_form_container'
+import EditPlaylistFormContainer from './playlists/edit_playlist_form_container'
 
 const App = () => {
    
@@ -25,6 +26,7 @@ const App = () => {
             <ProtectedRoute exact path="/playlists" component={PlaylistIndexContainer}/>
             <Switch>
                 <ProtectedRoute path="/playlists/new" component={NewPlaylistFormContainer} />
+                <ProtectedRoute exact path="/playlists/:playlistId/edit" component={EditPlaylistFormContainer} />
                 <ProtectedRoute exact path="/playlists/:playlistId" component={PlaylistShowContainer} />
             </Switch>
             <ProtectedRoute exact path="/songs" component={SongIndexContainer}/>

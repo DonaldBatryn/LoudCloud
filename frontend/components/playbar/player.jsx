@@ -1,19 +1,20 @@
 import React from 'react'
-import ReactPlayer from 'react-player';
+
 
 class Player extends React.Component {
-
+    constructor(props){
+        super(props);
+        this.state = {
+            playing: false,
+            duration: 0,
+            vol: 100,
+            song_url: ""
+        }
+    }
 
     render(){
         return (
-            <div className="player-wrapper">
-                <ReactPlayer
-                    url="app/assets/images/diver_i_hope_yr_not.mp3" 
-                    playing="false"
-                    className="react-player"
-                    width='100%'
-                    height='100%' />
-            </div>
+            <audio id="audio-player" src={this.state.song_url}></audio>
         )
     }
 }
@@ -21,4 +22,3 @@ export default Player;
 
 
 
-//

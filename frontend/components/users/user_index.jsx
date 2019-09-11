@@ -13,7 +13,7 @@ class UserIndex extends React.Component{
         const { users } = this.props
         let otherUsers;
         otherUsers = users.filter(user => {
-            return (user.id !== this.props.currentUser.id )&& (user.id !== 1)
+            return (user.id !== this.props.currentUser.id )&& (user.username !== "Guest")
         })
        
         let first = otherUsers.slice(0, 3)

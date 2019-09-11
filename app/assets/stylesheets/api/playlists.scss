@@ -128,12 +128,13 @@ a.playlist-preview:hover{
 }
 
 .delete-pl-button{
-   
+    margin: 10px 0 10px 0;
     width: 140px;
     height: 35px;
     // background-color: whitesmoke;
     color: gray;
     transition: all 0.3s ease-in-out;
+    border-radius: 7px;
 }
 
 .delete-pl-button:hover{
@@ -229,6 +230,8 @@ a.playlist-preview:hover{
 }
 
 .pl-song-info{
+    margin-left: 10px;
+    padding-left: 15px;
     height: 98%;
     width: 80%;
     // background-color: purple;
@@ -271,7 +274,7 @@ a.playlist-preview:hover{
     margin-right: 30px;
     width: 90%;
     height: 400px;
-    background-color: gray;
+    // background-color: gray;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
@@ -287,12 +290,17 @@ a.playlist-preview:hover{
 .new-pl-form{
     width: 80%;
     height: 90%;
-    background-color: pink;
-    border-radius: 3px;
+    background-color: whitesmoke;
+    border-radius: 7px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
     align-items: center;
+}
+
+.new-pl-form > h2{
+    color: orange;
+    
 }
 
 .pl-errors{
@@ -305,7 +313,13 @@ a.playlist-preview:hover{
 
 }
 
-
+.crud-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 15px;
+}
 
 .pl-create-button{
     margin-bottom: 15px;
@@ -313,11 +327,13 @@ a.playlist-preview:hover{
     height: 35px;
     background-color: whitesmoke;
     color: gray;
+    
 }
 
 .pl-create-button:hover{
     color: orange;
     background-color: white;
+    border: 2px solid orange;
 }
 
 .pl-label{

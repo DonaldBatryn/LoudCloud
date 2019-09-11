@@ -1,6 +1,7 @@
 import React from 'react'
 import PlaylistIndexItem from './playlist_index_item'
 
+
 class PlaylistIndex extends React.Component{
 
     componentDidMount(){
@@ -18,7 +19,7 @@ class PlaylistIndex extends React.Component{
         let allPlaylists = this.props.playlists.map(playlist => {
             author = allUsers[playlist.user_id]
      
-            return <PlaylistIndexItem key={`pl-${playlist.id}`} playlist={playlist} author={author}/>
+            return <PlaylistIndexItem key={`pl-${playlist.id}`} playlist={playlist} author={author} />
         })
         return (
             <div className="main-pl-index">

@@ -9,7 +9,14 @@ class SongIndex extends React.Component{
 
     render(){
         let allSongs = this.props.songs.map(song => {
-            return <div className="song-index-item" ><SongPreview key={`song-${song.title}`} song={song} /></div>
+            return <div className="song-index-item" >
+                <SongPreview 
+                    pause={this.props.pause} 
+                    unpause={this.props.unpause} 
+                    playlists={this.props.playlists} 
+                    key={`song-${song.title}`} 
+                    song={song} 
+                /></div>
         })
         return (
             <div className="main-song-index">

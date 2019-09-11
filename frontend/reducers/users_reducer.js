@@ -1,6 +1,7 @@
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions'
 import { RECEIVE_USERS, RECEIVE_USER } from '../actions/user_actions'
 
+
 const usersReducer = (state = {}, action) => {
     Object.freeze(state)
     switch (action.type) {

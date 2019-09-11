@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import PlaylistShow from './playlist_show'
-import { fetchPlaylists } from '../../actions/playlist_actions'
+import { fetchPlaylists, fetchPlaylist } from '../../actions/playlist_actions'
 import { fetchSongs } from '../../actions/song_actions'
 import { fetchUsers } from '../../actions/user_actions'
 
@@ -11,6 +11,7 @@ const msp = (state, ownProps) => {
     let users = state.entities.users
  
     return ({
+        currentUser: state.session.id,
         playlist,
         songs,
         users
@@ -20,6 +21,7 @@ const msp = (state, ownProps) => {
 const mdp = dispatch => {
     return ({
         fetchPlaylists: () => dispatch(fetchPlaylists()),
+        fetchPlaylist: id => dispatch(fetchPlaylist(id)),
         fetchSongs: () => dispatch(fetchSongs()),
         fetchUsers: () => dispatch(fetchUsers())
     })

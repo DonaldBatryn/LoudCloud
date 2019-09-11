@@ -6,7 +6,7 @@ class PlaylistShow extends React.Component{
 
     componentDidMount(){
         let playlistId = parseInt(this.props.match.params.playlistId)
-        // this.props.fetchPlaylists();
+        this.props.fetchPlaylist(playlistId);
         this.props.fetchSongs();
         this.props.fetchUsers();
     }
@@ -25,6 +25,11 @@ class PlaylistShow extends React.Component{
             song = songs[id]
             return <div className="pl-song"><SongSnippet key={`sng-${song.id}`} song={song} /></div>
         })
+        
+        let editButton = "";
+        if (this.props.currentUser === playlist.user_id){
+            editButton = <div><button className="delete-pl-button" onClick={this.handleUpdate}>Update</button></div>
+        }
         return (
             <div className="pl-show-main">
                 <div className="pl-show-info">
@@ -33,17 +38,10 @@ class PlaylistShow extends React.Component{
                         <h2>{this.props.playlist.title}</h2>
                         <h4>by&nbsp;&nbsp;{users[playlist.user_id].username}</h4>
                     </div>
-
+                    {editButton}
                 </div>
                 <div className="pl-songs-box">
                     {allSongs}
-                    {/* <div className="pl-song"></div>
-                    <div className="pl-song"></div>
-                    <div className="pl-song"></div>
-                    <div className="pl-song"></div>
-                    <div className="pl-song"></div>
-                    <div className="pl-song"></div>
-                    <div className="pl-song"></div> */}
                 </div>
             </div>
         )

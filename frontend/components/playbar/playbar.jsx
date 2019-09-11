@@ -22,7 +22,7 @@ class PlayBar extends React.Component {
                 <div ><button className="icon-forward"><img src="/assets/forward.png" alt="forward" /></button></div>
                 <div ><button className="icon-shuffle"><img src="/assets/shuffle.png" alt="shuffle" /></button></div>
                 <div ><button className="icon-repeat"><img src="/assets/repeat.png" alt="repeat" /></button></div>
-                {/* <Player /> */}
+                <Player />
                 
             </nav>
         )

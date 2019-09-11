@@ -36,6 +36,6 @@ export const logout = () => (dispatch) => {
     return APIUtil.logout().then(() => dispatch(logoutCurrentUser()))
 }
 
-window.login = login;
-window.logout = logout;
-window.createNewUser = createNewUser;
+// window.login = login;
+// window.logout = logout;
+// window.createNewUser = createNewUser;

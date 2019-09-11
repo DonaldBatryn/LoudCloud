@@ -25,7 +25,11 @@ class UserShow extends React.Component{
         let createLink = "";
         if (this.props.user.playlists.length > 0){
             showBody = this.props.user.playlists.map(playlist => {
-                return <PlaylistPreview key={playlist.id} playlist={playlist} deletePlaylist={this.props.deletePlaylist}/>
+                return <PlaylistPreview key={playlist.id} 
+                    currentUser={this.props.currentUser} 
+                    playlist={playlist} 
+                    deletePlaylist={this.props.deletePlaylist}
+                    />
             })
         }else if (id === this.props.currentUser){
             showBody = <div className="playlist-blank">"You don't have any playlists yet."</div>
@@ -47,7 +51,7 @@ class UserShow extends React.Component{
                             <h2>{username}</h2>
                             <h3>Member Since:&nbsp;{formatDate(created_at)}</h3>
                             <h4>{playlists.length}&nbsp;{pluralize}</h4>
-                            <h4>Num Followers</h4>
+                            {/* <h4>Num Followers</h4> */}
                         </div>
                     </div>
                     {showBody}
