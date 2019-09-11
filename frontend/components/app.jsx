@@ -7,7 +7,7 @@ import PlaylistIndexContainer from './playlists/playlist_index_container'
 import SplashContainer from './splash/splash_container'
 import PlayBarContainer from './playbar/playbar_container'
 import Modal from './modal/modal'
-import CatagoryIndexContainer from './catagories/catagory_index';
+import CatagoryIndexContainer from './catagories/catagory_index_container';
 import UserShowContainer from './users/user_show_container'
 import PlaylistShowContainer from './playlists/playlist_show_container'
 import SongIndexContainer from './songs/song_index_container'
