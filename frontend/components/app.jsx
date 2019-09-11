@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils'
 import NavBarContainer from './navbar/navbar_container'
 import UserIndexContainer from './users/user_index_container'
@@ -32,6 +32,7 @@ const App = () => {
             <ProtectedRoute exact path="/songs" component={SongIndexContainer}/>
             <ProtectedRoute path="/users/:userId" component={UserShowContainer}/>
             <Route path="/" component={PlayBarContainer} />
+            <Redirect to="/"/>
         </div>
     )
 }

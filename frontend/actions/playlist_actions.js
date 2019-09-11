@@ -63,6 +63,12 @@ export const deletePlaylist = id => dispatch => (
         err => dispatch(receivePlaylistErrors(err.responseJSON)))
 )
 
+export const receivePLErrors = errors => dispatch => {
+    dispatch(receivePlaylistErrors(errors))
+
+}
+
+
 export const clearPLErrors = () => {
     dispatch(clearPlaylistErrors())
 }

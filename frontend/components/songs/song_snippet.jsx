@@ -9,7 +9,7 @@ class SongSnippet extends React.Component {
         }
         return (
             <div className="song-snip">
-                <img className="pl-song-image" src={window.cloud} />
+                <img className="pl-song-image" src={song.image_url} />
                 <div className="pl-song-info">
                     <h3>{song.title}</h3>
                     <h5>{song.artist}</h5>

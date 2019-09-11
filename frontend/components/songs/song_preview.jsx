@@ -46,10 +46,11 @@ class SongPreview extends React.Component{
         }else {
             playPauseImage = <div className="press-to-pause">||</div>
         }
+        // {playPauseImage}
         return (
             <div className="song-preview">
                 {/* <img className="song-preview-thumb" src={window.cloud}  /> */}
-                <img className="song-preview-thumb" src={this.props.song.image_url} onClick={() => this.handlePlay()} />{playPauseImage}
+                <img className="song-preview-thumb" src={this.props.song.image_url} onClick={() => this.handlePlay()} />
                 <div className="song-preview-info">
                     
                     <h3>{this.props.song.title}</h3>
