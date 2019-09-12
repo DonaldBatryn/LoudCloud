@@ -4,6 +4,7 @@ export const RECEIVE_USERS = 'RECEIVE_USERS'
 export const RECEIVE_USER = 'RECEIVE_USER'
 export const RECEIVE_FETCH_ERRORS = 'RECEIVE_FETCH_ERRORS'
 export const RECEIVE_CURRENT_SONG = 'RECEIVE_CURRENT_SONG'
+export const CLEAR_SONG = 'CLEAR_SONG';
 
 const receiveUsers = users => ({
     type: RECEIVE_USERS,

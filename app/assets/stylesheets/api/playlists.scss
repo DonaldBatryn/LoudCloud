@@ -372,3 +372,27 @@ a.playlist-preview:hover{
 .pl-label{
     font-size: 30px;
 }
+
+.add-text{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    font-size: 28px;
+}
+
+.hidden-pl-txt{
+    display: none;
+    margin-left: 20px;
+}
+
+.add-text:hover .hidden-pl-txt{
+    display: block;
+    width: 90%px;
+    font-size: 16px;
+    position: absolute;
+    z-index: 1;
+    color: whitesmoke;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 5px 10px;
+}

@@ -26,7 +26,8 @@ class NewPlaylistForm extends React.Component{
             if (this.props.errors.length > 0){
                 return
             }else {
-                <Redirect to="/playlists" />
+                // <Redirect to="/playlists" />
+                this.props.history.push(`/users/${this.props.currentUser}`)
             }
         })
     }

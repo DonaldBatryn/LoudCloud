@@ -18,7 +18,8 @@ const msp = state => {
     return ({
         playlists: userPlaylists,
         songs: Object.keys(state.entities.songs).map(id => state.entities.songs[id]),
-        isPaused: true
+        isPaused: state.ui.paused,
+        currentSong: state.ui.currentSong
     })
 }
 

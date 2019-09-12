@@ -11,7 +11,8 @@ const msp = state => {
             image: ""
         },
         errors: state.errors.playlist,
-        formType: "Create Playlist"
+        formType: "Create Playlist",
+        currentUser: state.session.id
     })
 }
 

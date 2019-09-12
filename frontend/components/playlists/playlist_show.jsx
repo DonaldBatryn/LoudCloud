@@ -15,8 +15,9 @@ class PlaylistShow extends React.Component{
         this.props.fetchUsers();
     }
     
-    componentDidUpdate(prevProps){
-        
+    handleUpdate(e) {
+        // e.stopPropagation();
+        this.props.history.push(`/playlists/${this.props.playlist.id}/edit`) 
     }
     
     render(){
@@ -28,7 +29,14 @@ class PlaylistShow extends React.Component{
         let song;
         let allSongs = playlist.song_ids.map(id => {
             song = songs[id]
-            return <div key={`sng-${song.id}`} className="pl-song"><SongSnippet key={`sng-${song.id}`} song={song} /></div>
+            return <div key={`sng-${song.id}`} className="pl-song">
+                <SongSnippet key={`sng-${song.id}`} 
+                            play={this.props.play} 
+                            pause={this.props.pause} 
+                            song={song} 
+                            paused={this.props.paused} 
+                            currentSong={this.props.currentSong} />
+                    </div>
         })
         
         let editButton = "";

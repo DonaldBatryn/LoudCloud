@@ -5,21 +5,21 @@ class SongPreview extends React.Component{
     constructor(props){
         super(props)
         this.handleSelect = this.handleSelect.bind(this)
-        this.state = {
-            paused: true
-        }
         this.revealDropdown = this.revealDropdown.bind(this)
     }
 
     handlePlay(){
         let player = document.getElementById("audio-player")
         player.setAttribute('src', this.props.song.song_url)
-        if (this.state.paused === true){
+        if (this.props.paused === true){
+            this.props.play(this.props.song)
             player.play();
-            this.setState({ paused: false })
+        } else if (this.props.paused === false && this.props.song !== this.props.currentSong){
+            this.props.play(this.props.song)
+            player.play();
         } else {
+            this.props.pause()
             player.pause()
-            this.setState({ paused: true })
         }
     }
 
@@ -31,9 +31,7 @@ class SongPreview extends React.Component{
         }
     }
 
-    toggleDropdown(){
-        
-    }
+ 
 
     revealDropdown(){
         let allDds = Array.from(document.getElementsByClassName("dd"));
@@ -53,13 +51,6 @@ class SongPreview extends React.Component{
         let playlistLis = Object.keys(this.props.playlists).map(id => {
             return <li key={id} className="drop-down-li" onClick={this.handleSelect(id)}>{this.props.playlists[id].title}</li>
         })
-        // let playPauseImage;
-        // if (this.state.paused === true){
-        //     playPauseImage = <div className="press-to-play">></div>
-        // }else {
-        //     playPauseImage = <div className="press-to-pause">||</div>
-        // }
-        // {playPauseImage}
         return (
             <div className="song-preview">
                 {/* <img className="song-preview-thumb" src={window.cloud}  /> */}
@@ -71,8 +62,8 @@ class SongPreview extends React.Component{
                     <h4>from&nbsp;{this.props.song.album_name}</h4>
                 </div>
                 <div className="add-to-pl" onClick={this.revealDropdown}>
-                        <h6 className="add-text">...
-
+                    <h6 className="add-text">...&nbsp;&nbsp;&nbsp;
+                            <h6 className="hidden-pl-txt">Add to a Playlist</h6>
                         </h6>
                     <ul className={`dd drop-down-${this.props.song.id} hidden`} >
 

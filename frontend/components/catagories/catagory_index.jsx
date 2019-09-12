@@ -18,10 +18,10 @@ class CatagoryIndex extends React.Component {
         
         return (
         <div className="main-index">
-            <CatagoryIndexItem catagory="New Releases" description="Fresh tracks hot off the Active Storage blob" songs={group1} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused}/>
-                <CatagoryIndexItem catagory="Trending" description="Most popular on LoudCloud" songs={group2} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused}/>
-                <CatagoryIndexItem catagory="Donnie's Picks" description="Picked by the artist/developer himself" songs={group3} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused}/>
-                <CatagoryIndexItem catagory="Classic Jams" description="Tunes that never get old" songs={group4} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused}/>
+            <CatagoryIndexItem catagory="New Releases" description="Fresh tracks hot off the Active Storage blob" songs={group1} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused} currentSong={this.props.currentSong}/>
+                <CatagoryIndexItem catagory="Trending" description="Most popular on LoudCloud" songs={group2} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused} currentSong={this.props.currentSong}/>
+                <CatagoryIndexItem catagory="Donnie's Picks" description="Picked by the artist/developer himself" songs={group3} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused} currentSong={this.props.currentSong}/>
+                <CatagoryIndexItem catagory="Classic Jams" description="Tunes that never get old" songs={group4} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused} currentSong={this.props.currentSong}/>
         </div>
         )
     }

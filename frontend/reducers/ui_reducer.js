@@ -5,8 +5,8 @@ import playReducer from './play_reducer'
 
 const uiReducer = combineReducers({
   modal: modalReducer,
+  currentSong: playReducer,
   paused: pausedReducer,
-  currentSong: playReducer
 })
 
 export default uiReducer;

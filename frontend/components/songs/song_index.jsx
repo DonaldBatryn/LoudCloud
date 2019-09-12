@@ -10,7 +10,10 @@ class SongIndex extends React.Component{
     render(){
         let allSongs = this.props.songs.map(song => {
             return <div className="song-index-item" key={`song-${song.title}`} >
-                <SongPreview 
+                <SongPreview
+                    currentSong={this.props.currentSong}
+                    paused={this.props.paused}
+                    play={this.props.play} 
                     pause={this.props.pause} 
                     unpause={this.props.unpause} 
                     playlists={this.props.playlists} 

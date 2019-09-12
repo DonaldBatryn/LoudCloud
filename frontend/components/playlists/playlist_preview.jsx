@@ -3,17 +3,22 @@ import { formatDate } from '../../utils/date_util'
 import { Link, Route } from 'react-router-dom';
 
 class PlaylistPreview extends React.Component {
+    constructor(props){
+        super(props);
+    }
 
-    handleUpdate(e){
-        e.stopPropagation();
-        <Route to={`/playlists/${this.props.playlist.id/edit}`} />
+   
+
+    handleDelete(){
+        this.props.deletePlaylist(this.props.playlist.id)
+        this.props.history.push(`/users/${this.props.playlist.user_id}`)
     }
 
     render() {
         let deleteButton = "";
        
         if (this.props.currentUser === this.props.playlist.user_id){
-            deleteButton = <div><button className="delete-pl-button" onClick={() => this.props.deletePlaylist(this.props.playlist.id)}>Delete</button></div>
+            deleteButton = <div><button className="delete-pl-button" onClick={() => this.handleDelete() }>Delete</button></div>
             
         }
         return (
