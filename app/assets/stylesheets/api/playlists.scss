@@ -46,11 +46,11 @@
 
 .playlist-snip{
     height: 98%;
-    width: 98%;
+    width: 90%;
     // background-color: lightblue;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly; 
+    justify-content: flex-start; 
     align-items: center;
    
 }
@@ -64,13 +64,32 @@
 .pl-info {
     padding-left: 20px;
     height: 97%;
-    width: 75%;
+    width: 55%;
     // background-color: yellow;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; 
     align-items: left;
+    transition: all 0.3s ease-in-out;
 }
+
+.pl-info:hover{
+    color: orange;
+    background-color: white;
+}
+.smallest-txt{}
+
+#user-link{
+    margin-right: 40px;
+    width: 20px;
+    transition: all 0.3s ease-in-out;
+    background-color: inherit;
+
+}
+
+// .user-link:hover{
+//     font-size: 18px;
+// }
 
 // PLAYLIST PREVIEW
 
@@ -162,6 +181,7 @@ a.playlist-preview:hover{
     max-width: 1000px;
     order: 1;
     color: gray;
+    transition: all 0.3s ease-in-out;
 }
 
 .pl-show-info{
@@ -191,6 +211,15 @@ a.playlist-preview:hover{
     align-items: center;
     font-size: 30px;
     text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.pl-show-text a{
+    font-size: 35px;
+}
+
+.pl-show-text a:hover{
+    color: orange;
 }
 
 .pl-songs-box{
@@ -201,6 +230,7 @@ a.playlist-preview:hover{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .pl-song{
@@ -221,6 +251,7 @@ a.playlist-preview:hover{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .pl-song-image{

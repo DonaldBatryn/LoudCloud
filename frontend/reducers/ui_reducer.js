@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import modalReducer from './modal_reducer'
 import pausedReducer from './paused_reducer';
+import playReducer from './play_reducer'
 
 const uiReducer = combineReducers({
   modal: modalReducer,
-  paused: pausedReducer
+  paused: pausedReducer,
+  currentSong: playReducer
 })
 
 export default uiReducer;

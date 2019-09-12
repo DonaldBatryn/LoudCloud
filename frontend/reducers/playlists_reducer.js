@@ -11,6 +11,7 @@ const playlistsReducer = (state = {}, action) => {
         case RECEIVE_PLAYLISTS:
             return action.playlists;
         case RECEIVE_PLAYLIST:
+           
             newState = Object.assign({}, state, { [action.playlist.id]: action.playlist })
             return newState;
         case REMOVE_PLAYLIST:

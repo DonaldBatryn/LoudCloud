@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import { play } from '../../actions/user_actions'
 import { fetchSongs, pause, unpause } from '../../actions/song_actions'
 import CatagoryIndex from './catagory_index';
 
@@ -17,13 +17,15 @@ const msp = state => {
 
     return ({
         playlists: userPlaylists,
-        songs: Object.keys(state.entities.songs).map(id => state.entities.songs[id])
+        songs: Object.keys(state.entities.songs).map(id => state.entities.songs[id]),
+        isPaused: true
     })
 }
 
 const mdp = dispatch => {
     return ({
         fetchSongs: () => dispatch(fetchSongs()),
+        play: (song) => dispatch(play(song)),
         pause: () => dispatch(pause()),
         unpause: () => dispatch(unpause())
     })

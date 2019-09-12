@@ -8,7 +8,7 @@ class Player extends React.Component {
             playing: false,
             duration: 0,
             vol: 100,
-            song_url: ""
+            song_url: this.props.song.song_url
         }
     }
 

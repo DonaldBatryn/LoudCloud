@@ -37,7 +37,7 @@ class UserShow extends React.Component{
             showBody = <div className="playlist-blank">"This user doesn't have any playlists yet."</div>
         }
         
-        if (id === this.props.currentUser){
+        if (id === this.props.currentUser && this.props.user.username !== "Guest"){
             createLink = <Link className="create-pl-link" to="/playlists/new"><h2>Create a New Playlist</h2></Link>
         }
 

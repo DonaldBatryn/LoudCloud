@@ -8,19 +8,22 @@ class SongIndexItem extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            paused: true
+            isPaused: this.props.isPaused
         }
     }
 
     handlePlay() {
         let player = document.getElementById("audio-player")
         player.setAttribute('src', this.props.song.song_url)
-        if (this.state.paused === true) {
+        
+        if (this.state.isPaused === true) {
+            this.props.play(this.props.song)
             player.play();
-            this.setState({ paused: false })
+            this.setState({ isPaused: false })
         } else {
+            this.props.pause();
             player.pause()
-            this.setState({ paused: true })
+            this.setState({ isPaused: true })
         }
     }
 

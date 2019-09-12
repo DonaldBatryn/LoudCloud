@@ -32,7 +32,7 @@ const App = () => {
             <ProtectedRoute exact path="/songs" component={SongIndexContainer}/>
             <ProtectedRoute path="/users/:userId" component={UserShowContainer}/>
             <Route path="/" component={PlayBarContainer} />
-            <Redirect to="/"/>
+            {/* <Redirect to="/"/> */}
         </div>
     )
 }

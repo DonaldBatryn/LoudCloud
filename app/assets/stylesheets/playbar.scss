@@ -37,3 +37,32 @@
     height: 70px;
     background-color: gray;
 }
+
+.progress-bar{
+    margin-left: 15px;
+    padding: 0 10px 0 10px;
+    width: 33.33%;
+    height: 150%;
+    // background-color: pink;
+    display: flex;
+    align-items: center
+}
+
+.current-song-info{
+    font-family: "Interstate","Lucida Grande",Arial,sans-serif;
+    color:gray;
+    margin-left: 25px;
+    padding: 3px 10px 3px 10px;
+    width: 33.33%;
+    height: 150%;
+    // background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.3s ease-in-out;
+}
+
+.current-song-info:hover{
+    color: orange;
+}

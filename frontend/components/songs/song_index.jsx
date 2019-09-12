@@ -9,7 +9,7 @@ class SongIndex extends React.Component{
 
     render(){
         let allSongs = this.props.songs.map(song => {
-            return <div className="song-index-item" >
+            return <div className="song-index-item" key={`song-${song.title}`} >
                 <SongPreview 
                     pause={this.props.pause} 
                     unpause={this.props.unpause} 

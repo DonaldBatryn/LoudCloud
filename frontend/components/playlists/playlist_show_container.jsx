@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import  {withRouter}  from 'react-router'
 import PlaylistShow from './playlist_show'
 import { fetchPlaylists, fetchPlaylist } from '../../actions/playlist_actions'
 import { fetchSongs } from '../../actions/song_actions'
@@ -9,7 +10,7 @@ const msp = (state, ownProps) => {
     let playlist = state.entities.playlists[playlistId]
     let songs = state.entities.songs
     let users = state.entities.users
- 
+
     return ({
         currentUser: state.session.id,
         playlist,
@@ -27,4 +28,4 @@ const mdp = dispatch => {
     })
 }
 
-export default connect(msp, mdp)(PlaylistShow)
+export default withRouter(connect(msp, mdp)(PlaylistShow))

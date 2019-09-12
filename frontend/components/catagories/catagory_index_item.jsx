@@ -11,10 +11,10 @@ class CatagoryIndexItem extends React.Component {
                 <h4 className="catagory-description">{this.props.description}</h4>
             </div>
             <div className="song-group">
-                <SongIndexItem song={this.props.songs[0]}/>
-                <SongIndexItem song={this.props.songs[1]}/>
-                <SongIndexItem song={this.props.songs[2]}/>
-                <SongIndexItem song={this.props.songs[3]}/>
+                <SongIndexItem song={this.props.songs[0]} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused}/>
+                <SongIndexItem song={this.props.songs[1]} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused}/>
+                <SongIndexItem song={this.props.songs[2]} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused}/>
+                <SongIndexItem song={this.props.songs[3]} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused}/>
             </div>
         </div>
         )

@@ -15,9 +15,9 @@ const receiveUser = user => ({
     user
 })
 
-const receiveCurrentSong = result => ({
+const receiveCurrentSong = song => ({
     type: RECEIVE_CURRENT_SONG,
-    result
+    song
 })
 
 export const fetchUsers = () => dispatch => {
@@ -28,10 +28,7 @@ export const fetchUser = (id) => dispatch => {
     return UserAPIUtil.fetchUser(id).then(user => dispatch(receiveUser(user)))
 }
 
-export const play = (song, userId) => dispatch => {
-    if (userId) {
-        return UserAPIUtil.play(song.id, userId).then(result => dispatch(receiveCurrentSong(result)))
-    } else {
-        dispatch(receiveCurrentSong({song}))
-    }
+export const play = (song) => dispatch => {
+    return UserAPIUtil.play(song.id).then(song => dispatch(receiveCurrentSong(song)))
 }
+

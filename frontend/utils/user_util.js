@@ -31,9 +31,9 @@ export const recents = userId => (
     })
 )
 
-export const play = (songId, userId) => (
+export const play = (songId) => (
     $.ajax({
-        method: 'POST',
-        url: `/api/users/${userId}/play/${songId}`
+        method: 'GET',
+        url: `/api/songs/${songId}`
     })
 )
