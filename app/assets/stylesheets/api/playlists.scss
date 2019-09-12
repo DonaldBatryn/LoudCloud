@@ -34,7 +34,7 @@
     background-color: whitesmoke;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly; 
+    justify-content: space-between; 
     align-items: center;
     transition: all 0.3s ease-in-out;
 }
@@ -46,11 +46,12 @@
 
 .playlist-snip{
     height: 98%;
-    width: 90%;
+    width: 80%;
     // background-color: lightblue;
+    padding-left: 25px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; 
+    justify-content: space-between; 
     align-items: center;
    
 }
@@ -64,7 +65,7 @@
 .pl-info {
     padding-left: 20px;
     height: 97%;
-    width: 55%;
+    width: 80%;
     // background-color: yellow;
     display: flex;
     flex-direction: column;
@@ -81,6 +82,7 @@
 
 #user-link{
     margin-right: 40px;
+    
     width: 20px;
     transition: all 0.3s ease-in-out;
     background-color: inherit;
@@ -123,7 +125,7 @@ a.playlist-preview:hover{
 }
 
 .pl-title-box{
-    width: 250px;
+    width: 310px;
     height: 98%;
     display: flex;
     align-items: center;

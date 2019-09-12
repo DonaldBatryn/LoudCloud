@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+
 
 
 
@@ -117,4 +117,18 @@ button.search-button {
 
 button.search-button:hover {
     background-color: #eebd1e;
+}
+
+@media all and (max-width: 800px){
+    p.nav-links{
+        display: none;
+    }
+  
+}
+
+@media all and (max-width: 625px){
+    p.splash-text-bottom{
+        width: 375px;
+        text-align: center;
+    }
 }

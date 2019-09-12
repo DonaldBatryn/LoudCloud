@@ -26,10 +26,14 @@ const removePlaylist = (id) => ({
     playlistId: id
 })
 
-const receivePlaylistErrors = errors => ({
-    type: RECEIVE_PLAYLIST_ERRORS,
-    errors
-})
+const receivePlaylistErrors = errors => {
+    debugger
+    return ({
+        type: RECEIVE_PLAYLIST_ERRORS,
+        errors
+
+    })
+}
 
 const clearPlaylistErrors = () => ({
     type: CLEAR_PLAYLIST_ERRORS
