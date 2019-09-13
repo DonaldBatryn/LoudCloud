@@ -7,7 +7,7 @@
     margin-bottom: 100px;
     margin-left: 30px;
     width: 66%;
-    height: 900px;
+    height: 1300px;
     // background-color: gray;
     border-radius: 3px;
     display: flex;
@@ -22,11 +22,22 @@
  
 }
 
-// .pl-index-header{
-//     width: 98%;
-//     height: 100px;
-//     background-color: pink;
-// }
+.pl-index-header{
+    padding: 20px 0;
+    // margin: 10px 0;
+    width: 98%;
+    height: 240px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: center;
+    color: orange;
+}
+
+h1.loudcloud-playlist{
+    margin-bottom: 10px;
+}
 
 .playlist-index-item {
     width: 98%;

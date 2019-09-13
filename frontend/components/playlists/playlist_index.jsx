@@ -21,7 +21,11 @@ class PlaylistIndex extends React.Component{
         })
         return (
             <div className="main-pl-index">
-                <div className="pl-index-header"></div>
+                <div className="pl-index-header">
+                    <h3 className="sub-header">Check out our Users' </h3>
+                    <h1 className="loudcloud-playlist">LoudCloud Playlists</h1>
+                    <div className="line"></div>
+                </div>
                 {allPlaylists}
             </div>
         )

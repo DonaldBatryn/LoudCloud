@@ -15,7 +15,7 @@
     justify-content: space-evenly; 
     align-items: center;
     font-family: "Interstate","Lucida Grande",Arial,sans-serif;
-    min-width: 400px;
+    min-width: 600px;
     max-width: 1000px;
 }
 
@@ -115,7 +115,7 @@
     justify-content: flex-start; 
     align-items: center;
     font-family: "Interstate","Lucida Grande",Arial,sans-serif;
-    min-width: 400px;
+    min-width: 700px;
     max-width: 1000px;
     order: 1;
 }
@@ -202,10 +202,6 @@
     background-color: gray;
     border-radius: 7px;
     padding: 10px;
-}
-
-.add-text{
-
 }
 
 .drop-down-li{
