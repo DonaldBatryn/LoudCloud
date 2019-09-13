@@ -9,8 +9,11 @@ class NewPlaylistForm extends React.Component{
         this.handleFile = this.handleFile.bind(this);
     }
 
+    componentDidMount(){
+        window.scrollTo(0, 0);
+    }
+
     handleFile(file){
-        
         this.setState({image:file})
     }
     
@@ -26,7 +29,6 @@ class NewPlaylistForm extends React.Component{
             if (this.props.errors.length > 0){
                 return
             }else {
-                // <Redirect to="/playlists" />
                 this.props.history.push(`/users/${this.props.currentUser}`)
             }
         })
@@ -45,18 +47,12 @@ class NewPlaylistForm extends React.Component{
                     <label className="pl-label" htmlFor="pl-title">Title:&nbsp;&nbsp;&nbsp;  
                         <input id="pl-title" type="text" 
                             onChange={this.handleInput('title')} value={this.state.title} />
-                    </label>
-                    {/* <label className="pl-label" htmlFor="pl-photo">Photo (optional):&nbsp;&nbsp;&nbsp;
-                        <input id="pl-photo" type="file" name="playlist[image]"
-                            onChange={(e) => this.handleFile(e.target.file)}  >Choose a photo</input>
-                    </label> */}
-                        
+                    </label>  
                     <input className="pl-create-button" type="submit" value={this.props.formType}/>
                 </form>
             </div>
         )
     }
-
 }
 
 export default NewPlaylistForm;

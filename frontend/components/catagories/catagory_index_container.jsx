@@ -1,8 +1,8 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { play } from '../../actions/user_actions'
 import { fetchSongs, pause, unpause } from '../../actions/song_actions'
 import CatagoryIndex from './catagory_index';
+import { fetchPlaylists } from '../../actions/playlist_actions'
 
 
 const msp = state => {
@@ -25,6 +25,7 @@ const msp = state => {
 
 const mdp = dispatch => {
     return ({
+        fetchPlaylists: () => dispatch(fetchPlaylists()),
         fetchSongs: () => dispatch(fetchSongs()),
         play: (song) => dispatch(play(song)),
         pause: () => dispatch(pause()),

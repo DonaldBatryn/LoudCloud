@@ -15,19 +15,6 @@ class SongForm extends React.Component{
         }
     }
 
-    
-
-    // handleSubmit(e){
-    //     e.preventDefault();
-    //     this.props.processSong(this.state).then(() => {
-    //         if (this.props.errors.length > 0){
-    //             return
-    //         }else{
-    //             this.props.closeModal()
-    //         }
-    //     })
-    // }
-
     handleSubmit(){
         if (!this.state.title){
             this.setState({noTitle: true})
@@ -60,22 +47,19 @@ class SongForm extends React.Component{
         })
     }
 
-    // handleSongFile(e){
-    //     const song
-    // }
-
     componentWillUnmount(){
         this.props.clearErrors()
     }
 
     render() {
+        let { formType, errors, closeModal } = this.props;
         let type;
-        if (this.props.formType === "Upload song") {
+        if (formType === "Upload song") {
             type = 'Upload';
         }else{
             type = 'Update'
         }
-        let err = this.props.errors;
+        let err = errors;
         err = err.join(", ")
         return (
             <div className="modal is-open" >
@@ -83,7 +67,7 @@ class SongForm extends React.Component{
                     {/* <label className="instruction">Please {type} to continue to LoudCloud</label> */}
                     <div className="errors">{err}</div>
                 
-                    <span className="modal-close js-modal-close" onClick={this.props.closeModal}>&times;</span>
+                    <span className="modal-close js-modal-close" onClick={closeModal}>&times;</span>
 
 
                     <label htmlFor="title">Title:</label>
@@ -100,7 +84,6 @@ class SongForm extends React.Component{
                         <textarea className="form" id="description" type="text" spellCheck="false" value={this.state.description} onChange={this.handleInput('description')} />
                     </div>
 
-                    {/* input for mp3 */}
 
                     <div id="submit-container">
                       
@@ -110,7 +93,7 @@ class SongForm extends React.Component{
 
                     </div>
                 </form>
-                <div className="modal-screen js-modal-close" onClick={this.props.closeModal}></div>
+                <div className="modal-screen js-modal-close" onClick={closeModal}></div>
             </div>
         )
     }

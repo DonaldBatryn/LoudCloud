@@ -9,9 +9,15 @@ class UserShow extends React.Component{
     }
 
     componentDidMount(){
-        // this.props.fetchUsers();
-        this.props.fetchPlaylists();
+        window.scrollTo(0, 0);
         this.props.fetchSongs();
+        this.props.fetchPlaylists();
+    }
+
+    componentDidUpdate(prevProps, nextProps){
+        if (prevProps !== nextProps){
+            window.scrollTo(0, 0);
+        }
     }
    
 
@@ -21,28 +27,31 @@ class UserShow extends React.Component{
         }
 
         let { username, created_at, playlists, id, image_url } = this.props.user
+        let { currentUser } = this.props;
         let showBody;
         let createLink = "";
-        if (this.props.user.playlists.length > 0){
-            showBody = this.props.user.playlists.map(playlist => {
-          
-                return <PlaylistPreview key={playlist.id} 
-                    currentUser={this.props.currentUser} 
-                    playlist={playlist} 
-                    deletePlaylist={this.props.deletePlaylist}
+        let that = this;
+     
+        if (playlists.length > 0){
+            showBody = playlists.map(playlist => {
+                const updatedPlaylist = that.props.playlists[playlist.id]
+                return <PlaylistPreview key={updatedPlaylist.id} 
+                    currentUser={that.props.currentUser} 
+                    playlist={updatedPlaylist} 
+                    deletePlaylist={that.props.deletePlaylist}
                     />
             })
-        }else if (id === this.props.currentUser){
+        }else if (id === currentUser){
             showBody = <div className="playlist-blank">"You don't have any playlists yet."</div>
         } else {
             showBody = <div className="playlist-blank">"This user doesn't have any playlists yet."</div>
         }
         
-        if (id === this.props.currentUser && this.props.user.username !== "Guest"){
+        if (id === currentUser && username !== "Guest"){
             createLink = <Link className="create-pl-link" to="/playlists/new"><h2>Create a New Playlist</h2></Link>
         }
 
-        let pluralize = this.props.user.playlists.length === 1 ? "Playlist" : "Playlists"
+        let pluralize = playlists.length === 1 ? "Playlist" : "Playlists"
         return (
             <div className="main-user-show">
                 <div className="user-box">

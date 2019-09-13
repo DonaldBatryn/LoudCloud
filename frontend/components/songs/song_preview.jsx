@@ -47,25 +47,25 @@ class SongPreview extends React.Component{
     }
 
     render(){
-        
-        let playlistLis = Object.keys(this.props.playlists).map(id => {
-            return <li key={id} className="drop-down-li" onClick={this.handleSelect(id)}>{this.props.playlists[id].title}</li>
+        let { playlists, song } = this.props;
+        let playlistLis = Object.keys(playlists).map(id => {
+            return <li key={id} className="drop-down-li" onClick={this.handleSelect(id)}>{playlists[id].title}</li>
         })
         return (
             <div className="song-preview">
                 {/* <img className="song-preview-thumb" src={window.cloud}  /> */}
-                <img className="song-preview-thumb" src={this.props.song.image_url} onClick={() => this.handlePlay()} />
+                <img className="song-preview-thumb" src={song.image_url} onClick={() => this.handlePlay()} />
                 <div className="song-preview-info">
                     
-                    <h3>{this.props.song.title}</h3>
-                    <h4>by&nbsp;{this.props.song.artist}</h4>
-                    <h4>from&nbsp;{this.props.song.album_name}</h4>
+                    <h3>{song.title}</h3>
+                    <h4>by&nbsp;{song.artist}</h4>
+                    <h4>from&nbsp;{song.album_name}</h4>
                 </div>
                 <div className="add-to-pl" onClick={this.revealDropdown}>
-                    <h5 className="add-text">...&nbsp;&nbsp;&nbsp;
+                    <div className="add-text">...&nbsp;&nbsp;&nbsp;
                             <h6 className="hidden-pl-txt">Add to a Playlist</h6>
-                        </h5>
-                    <ul className={`dd drop-down-${this.props.song.id} hidden`} >
+                        </div>
+                    <ul className={`dd drop-down-${song.id} hidden`} >
 
                         {playlistLis}
                     </ul>

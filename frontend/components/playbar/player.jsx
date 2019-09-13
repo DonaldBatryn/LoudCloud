@@ -1,30 +1,23 @@
 import React from 'react'
 
-
-
 class Player extends React.Component {
     constructor(props){
         super(props);
-        this.state = {
-            song: null
-        }
     }
 
-
     render(){
-        if (!(this.props.currentSong)){
+        let { currentSong } = this.props;
+        if (!(currentSong)){
             return (
                 <audio id="audio-player" src=""></audio>
             )
         }
-        let player = <audio id="audio-player" src={this.props.currentSong.audioUrl}></audio>
+        let player = <audio id="audio-player" src={currentSong.audioUrl}></audio>
         debugger
         return (
-                <Progress song={player} />
+            <div>{player}</div>
         )
     }
 }
+
 export default Player;
-
-
-

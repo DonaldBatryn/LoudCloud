@@ -4,17 +4,62 @@ import SongIndexItem from '../songs/song_index_item';
 class CatagoryIndexItem extends React.Component {
 
     render(){
+        let { 
+            songs, 
+            play, 
+            pause, 
+            unpause, 
+            isPaused, 
+            currentSong, 
+            catagory, 
+            description 
+        } = this.props;
+
+
         return (
         <div className="catagory-index-item">
             <div className="catagory-text">
-                <h2 className="catagory-name">{this.props.catagory}</h2>
-                <h4 className="catagory-description">{this.props.description}</h4>
+                <h2 className="catagory-name">{catagory}</h2>
+                <h4 className="catagory-description">{description}</h4>
             </div>
             <div className="song-group">
-                <SongIndexItem song={this.props.songs[0]} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused} currentSong={this.props.currentSong}/>
-                <SongIndexItem song={this.props.songs[1]} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused} currentSong={this.props.currentSong}/>
-                <SongIndexItem song={this.props.songs[2]} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused} currentSong={this.props.currentSong}/>
-                <SongIndexItem song={this.props.songs[3]} play={this.props.play} pause={this.props.pause} unpause={this.props.unpause} isPaused={this.props.isPaused} currentSong={this.props.currentSong}/>
+                <SongIndexItem 
+                    song={songs[0]} 
+                    play={play} 
+                    pause={pause} 
+                    unpause={unpause} 
+                    isPaused={isPaused} 
+                    currentSong={currentSong} 
+                />
+
+                <SongIndexItem
+                    song={songs[1]}
+                    play={play}
+                    pause={pause}
+                    unpause={unpause}
+                    isPaused={isPaused}
+                    currentSong={currentSong}
+                />
+
+                <SongIndexItem
+                    song={songs[2]}
+                    play={play}
+                    pause={pause}
+                    unpause={unpause}
+                    isPaused={isPaused}
+                    currentSong={currentSong}
+                />
+
+                <SongIndexItem
+                    song={songs[3]}
+                    play={play}
+                    pause={pause}
+                    unpause={unpause}
+                    isPaused={isPaused}
+                    currentSong={currentSong}
+                />
+
+              
             </div>
         </div>
         )

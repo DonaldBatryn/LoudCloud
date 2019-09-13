@@ -6,13 +6,8 @@ class EditPlaylistForm extends React.Component {
         super(props)
         this.state = this.props.playlist
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleFile = this.handleFile.bind(this);
     }
 
-    // handleFile(file) {
-
-    //     this.setState({ image: file })
-    // }
 
     handleInput(field) {
         return (e) => {
@@ -44,11 +39,6 @@ class EditPlaylistForm extends React.Component {
                         <input id="pl-title" type="text"
                             onChange={this.handleInput('title')} value={this.state.title} />
                     </label>
-                    {/* <label className="pl-label" htmlFor="pl-photo">Photo (optional):&nbsp;&nbsp;&nbsp;
-                        <input id="pl-photo" type="file" name="playlist[image]"
-                            onChange={(e) => this.handleFile(e.target.file)}  >Choose a photo</input>
-                    </label> */}
-
                     <input className="pl-create-button" type="submit" value={this.props.formType} />
                 </form>
             </div>

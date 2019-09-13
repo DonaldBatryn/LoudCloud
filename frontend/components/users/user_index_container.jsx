@@ -17,11 +17,7 @@ const msp = state => {
 }
 
 const mdp = dispatch => ({
-  
     fetchUsers: () => dispatch(fetchUsers())
- 
 })
 
 export default connect(msp, mdp)(UserIndex)
-
-// Object.keys(state.entities.users).map(id => state.entities.users[id])

@@ -18,7 +18,7 @@ class SessionForm extends React.Component {
             }
         }
         this.handleSubmit = this.handleSubmit.bind(this)
-        // this.handleDemo = this.handleDemo.bind(this);
+       
         this.prettyDemoUser = this.prettyDemoUser.bind(this);
     }
 
@@ -72,15 +72,6 @@ class SessionForm extends React.Component {
         document.getElementById('password').blur();
     }
 
-    // handleDemo(e){
-    //     e.preventDefault();
-    //     this.props.processForm({
-    //         username: "Guest",
-    //         password: '123456'
-    //     }).then(this.props.closeModal())
-       
-    // }
-
     componentWillUnmount(){
         this.props.clearErrors()
     }
@@ -88,18 +79,18 @@ class SessionForm extends React.Component {
     render(){
         let type;
         let linkType;
-        
-        if (this.props.formType === "Login"){
+        let { formType, session, closeModal, otherForm } = this.props;
+        if (formType === "Login"){
             type = 'Login';
-            let err = this.props.session;
+            let err = session;
             err = err.join(", ")
             return (
                 <div className="modal is-open" >
                     <form className="modal-form" onSubmit={this.handleSubmit}>
                         <label className="instruction">Please {type} to continue to LoudCloud</label>
                     <div className="errors">{err}</div>
-                    {/* {this.renderErrors()} */}
-                        <span className="modal-close js-modal-close" onClick={this.props.closeModal}>&times;</span>
+                
+                        <span className="modal-close js-modal-close" onClick={closeModal}>&times;</span>
 
 
                         <label htmlFor="username">Username:</label>
@@ -112,24 +103,24 @@ class SessionForm extends React.Component {
                         <div id="submit-container">
                             <input id="demo-submit"  className="submit" type="submit" value={type} />
                             <button className="submit" onClick={this.prettyDemoUser}>Continue as Guest</button><br/>
-                            {this.props.otherForm}
+                            {otherForm}
 
                         </div>
                     </form>
-                    <div className="modal-screen js-modal-close" onClick={this.props.closeModal}></div>
+                    <div className="modal-screen js-modal-close" onClick={closeModal}></div>
                 </div>
             )
         } else {
             type = 'Sign Up';
-            let err = this.props.session;
+            let err = session;
             err = err.join(", ")
             return (
                 <div className="modal is-open" >
                     <form className="modal-form" onSubmit={this.handleSubmit}>
                             <label className="instruction">Please {type} to continue to LoudCloud</label>
                     <div className="errors">{err}</div>
-                        {/* {this.renderErrors()} */}
-                        <span className="modal-close js-modal-close" onClick={this.props.closeModal}>&times;</span>
+                  
+                        <span className="modal-close js-modal-close" onClick={closeModal}>&times;</span>
 
 
                         <label htmlFor="username">Username:</label>
@@ -142,10 +133,10 @@ class SessionForm extends React.Component {
                         <input className="form" id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
                         <div id="submit-container">
                             <input className="submit" type="submit" value={type}/>
-                            {this.props.otherForm}
+                            {otherForm}
                         </div>
                     </form>
-                    <div className="modal-screen js-modal-close" onClick={this.props.closeModal}></div>
+                    <div className="modal-screen js-modal-close" onClick={closeModal}></div>
                     
                 </div>
             )

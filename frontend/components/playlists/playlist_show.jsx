@@ -7,21 +7,20 @@ import { Link } from 'react-router-dom'
 class PlaylistShow extends React.Component{
 
     componentDidMount(){
+        window.scrollTo(0, 0);
         let playlistId = parseInt(this.props.match.params.playlistId)
         this.props.fetchSongs().then(() => {
             this.props.fetchPlaylist(playlistId);
-
         });
         this.props.fetchUsers();
     }
     
     handleUpdate(e) {
-        // e.stopPropagation();
         this.props.history.push(`/playlists/${this.props.playlist.id}/edit`) 
     }
     
     render(){
-        let { songs, playlist, users } = this.props
+        let { songs, playlist, users, play, pause, paused, currentSong } = this.props
     
         if (!playlist || !songs){
             return <div className="pl-show-main">Loading...</div>

@@ -4,19 +4,21 @@ import SongPreview from './song_preview'
 class SongIndex extends React.Component{
 
     componentDidMount(){
+        window.scrollTo(0, 0);
         this.props.fetchSongs();
     }
 
     render(){
-        let allSongs = this.props.songs.map(song => {
+        let { songs, currentSong, paused, play, pause, playlists, unpause } = this.props;
+        let allSongs = songs.map(song => {
             return <div className="song-index-item" key={`song-${song.title}`} >
                 <SongPreview
-                    currentSong={this.props.currentSong}
-                    paused={this.props.paused}
-                    play={this.props.play} 
-                    pause={this.props.pause} 
-                    unpause={this.props.unpause} 
-                    playlists={this.props.playlists} 
+                    currentSong={currentSong}
+                    paused={paused}
+                    play={play} 
+                    pause={pause} 
+                    unpause={unpause} 
+                    playlists={playlists} 
                     key={`song-${song.title}`} 
                     song={song} 
                 /></div>

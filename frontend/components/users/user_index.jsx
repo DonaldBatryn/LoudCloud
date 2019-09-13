@@ -5,15 +5,15 @@ class UserIndex extends React.Component{
 
 
     componentDidMount(){
+        window.scrollTo(0, 0);
         this.props.fetchUsers()
-       
     }
     
     render(){
-        const { users } = this.props
+        const { users, currentUser } = this.props
         let otherUsers;
         otherUsers = users.filter(user => {
-            return (user.id !== this.props.currentUser.id )&& (user.username !== "Guest")
+            return (user.id !== currentUser.id ) && (user.username !== "Guest")
         })
        
         let first = otherUsers.slice(0, 3)
