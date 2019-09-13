@@ -1,6 +1,7 @@
 import React from 'react'
 
 
+
 class Player extends React.Component {
     constructor(props){
         super(props);
@@ -8,7 +9,7 @@ class Player extends React.Component {
             song: null
         }
     }
-    
+
 
     render(){
         if (!(this.props.currentSong)){
@@ -16,9 +17,10 @@ class Player extends React.Component {
                 <audio id="audio-player" src=""></audio>
             )
         }
-        
+        let player = <audio id="audio-player" src={this.props.currentSong.audioUrl}></audio>
+        debugger
         return (
-            <audio id="audio-player" src={this.props.currentSong.audioUrl}></audio>
+                <Progress song={player} />
         )
     }
 }

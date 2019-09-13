@@ -1,5 +1,6 @@
 import React from 'react';
 import Player from './player'
+import Progress from './progress'
 
 
 class PlayBar extends React.Component {
@@ -49,6 +50,7 @@ class PlayBar extends React.Component {
         } else {
             playPause = <div ><button onClick={() => this.handlePlay()} className="icon-pause "><img className="controls" src={window.pause} alt="pause" /></button></div>
         }
+        let previewImage = ""
         let songInfo = ""
         if (this.props.currentSong){
             songInfo = (
@@ -59,7 +61,9 @@ class PlayBar extends React.Component {
 
                 </div>
             )
-        }
+            previewImage = <img className="playbar-thumb" src={this.props.currentSong.image_url} />
+        } 
+        
         return (
             <nav id="play-nav">
 
@@ -69,9 +73,12 @@ class PlayBar extends React.Component {
                 <div ><button className="icon-forward "><img className="controls" src={window.forward} alt="forward" /></button></div>
                 <div ><button className="icon-shuffle "><img className="controls" src={window.shuffle} alt="shuffle" /></button></div>
                 <div ><button className="icon-repeat "><img className="controls" src={window.repeat} alt="repeat" /></button></div>
-                <Player song={this.props.currentSong}/>
-                <div className="progress-bar"></div>
-                <img className="playbar-thumb" src={this.props.currentSong.image_url} />
+                <div className="progress-bar">
+                    <Player song={this.props.currentSong}/>
+
+                </div>
+                {/* <img className="playbar-thumb" src={this.props.currentSong.image_url} /> */}
+                {previewImage}
                 {songInfo}
             </nav>
         )
