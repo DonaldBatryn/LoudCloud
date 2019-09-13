@@ -21,10 +21,11 @@ class PlaylistPreview extends React.Component {
             deleteButton = <div><button className="delete-pl-button" onClick={() => this.handleDelete() }>Delete</button></div>
             
         }
+       
         return (
             <div className="playlist-preview">
                 <Link className="playlist-preview" to={`/playlists/${this.props.playlist.id}`}>
-                    <img className="play-prev-thumb" src={window.cloud} />
+                    <img className="play-prev-thumb" src={this.props.playlist.image_url} />
                     <div className="pl-title-box">
                         <h3>{this.props.playlist.title}</h3>
                     </div>

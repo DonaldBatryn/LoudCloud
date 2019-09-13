@@ -27,7 +27,7 @@ const removePlaylist = (id) => ({
 })
 
 const receivePlaylistErrors = errors => {
-    debugger
+
     return ({
         type: RECEIVE_PLAYLIST_ERRORS,
         errors

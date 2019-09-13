@@ -25,7 +25,7 @@
 }
 
 // player button sizing
-#play-nav img {
+#play-nav img.controls {
     width: 30px;
     height: auto;
     margin: 0 8px;
@@ -65,4 +65,10 @@
 
 .current-song-info:hover{
     color: orange;
+}
+
+.playbar-thumb{
+    height: 150%;
+    width: auto;
+    border: 1px solid gray;
 }

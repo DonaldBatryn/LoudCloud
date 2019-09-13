@@ -45,9 +45,9 @@ class PlayBar extends React.Component {
 
         let playPause;
         if (this.props.isPlaying === false){
-            playPause = <div ><button onClick={() => this.handlePlay()} className="icon-play"><img src={window.play} alt="play" /></button></div>
+            playPause = <div ><button onClick={() => this.handlePlay()} className="icon-play "><img className="controls" src={window.play} alt="play" /></button></div>
         } else {
-            playPause = <div ><button onClick={() => this.handlePlay()} className="icon-pause"><img src={window.pause} alt="pause" /></button></div>
+            playPause = <div ><button onClick={() => this.handlePlay()} className="icon-pause "><img className="controls" src={window.pause} alt="pause" /></button></div>
         }
         let songInfo = ""
         if (this.props.currentSong){
@@ -63,14 +63,15 @@ class PlayBar extends React.Component {
         return (
             <nav id="play-nav">
 
-                <div ><button className="icon-rewind"><img src={window.rewind} alt="rewind" /></button></div>
+                <div ><button className="icon-rewind "><img className="controls" src={window.rewind} alt="rewind" /></button></div>
                 {/* <div ><button onClick={this.handlePlay(audioPlayer)} className="icon-play"><img src="/assets/play.png" alt="play" /></button></div> */}
                 {playPause}
-                <div ><button className="icon-forward"><img src={window.forward} alt="forward" /></button></div>
-                <div ><button className="icon-shuffle"><img src={window.shuffle} alt="shuffle" /></button></div>
-                <div ><button className="icon-repeat"><img src={window.repeat} alt="repeat" /></button></div>
+                <div ><button className="icon-forward "><img className="controls" src={window.forward} alt="forward" /></button></div>
+                <div ><button className="icon-shuffle "><img className="controls" src={window.shuffle} alt="shuffle" /></button></div>
+                <div ><button className="icon-repeat "><img className="controls" src={window.repeat} alt="repeat" /></button></div>
                 <Player song={this.props.currentSong}/>
                 <div className="progress-bar"></div>
+                <img className="playbar-thumb" src={this.props.currentSong.image_url} />
                 {songInfo}
             </nav>
         )

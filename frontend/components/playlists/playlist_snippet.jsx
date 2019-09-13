@@ -19,7 +19,7 @@ class PlaylistSnippet extends React.Component{
         }
         return (
             <div className="playlist-snip"> <Link className="playlist-snip" to={`/playlists/${this.props.playlist.id}`} >
-                <img className="pl-image" src={window.cloud}  />
+                <img className="pl-image" src={this.props.playlist.image_url}  />
                 <div className="pl-info">
                   
                     <h3>{playlist.title}</h3>

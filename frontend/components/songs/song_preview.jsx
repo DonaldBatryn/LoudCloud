@@ -14,7 +14,7 @@ class SongPreview extends React.Component{
         if (this.props.paused === true){
             this.props.play(this.props.song)
             player.play();
-        } else if (this.props.paused === false && this.props.song !== this.props.currentSong){
+        } else if (this.props.paused === false && this.props.song.id !== this.props.currentSong.id){
             this.props.play(this.props.song)
             player.play();
         } else {
@@ -62,9 +62,9 @@ class SongPreview extends React.Component{
                     <h4>from&nbsp;{this.props.song.album_name}</h4>
                 </div>
                 <div className="add-to-pl" onClick={this.revealDropdown}>
-                    <h6 className="add-text">...&nbsp;&nbsp;&nbsp;
+                    <h5 className="add-text">...&nbsp;&nbsp;&nbsp;
                             <h6 className="hidden-pl-txt">Add to a Playlist</h6>
-                        </h6>
+                        </h5>
                     <ul className={`dd drop-down-${this.props.song.id} hidden`} >
 
                         {playlistLis}

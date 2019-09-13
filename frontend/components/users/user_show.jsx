@@ -20,11 +20,12 @@ class UserShow extends React.Component{
             return <div className="main-user-show"></div>
         }
 
-        let { username, created_at, playlists, id } = this.props.user
+        let { username, created_at, playlists, id, image_url } = this.props.user
         let showBody;
         let createLink = "";
         if (this.props.user.playlists.length > 0){
             showBody = this.props.user.playlists.map(playlist => {
+          
                 return <PlaylistPreview key={playlist.id} 
                     currentUser={this.props.currentUser} 
                     playlist={playlist} 
@@ -46,12 +47,12 @@ class UserShow extends React.Component{
             <div className="main-user-show">
                 <div className="user-box">
                     <div className="user-info">
-                        <img className="show-thumb" src={window.cloud} />
+                        <img className="show-thumb" src={image_url} />
                         <div className="deets">
                             <h2>{username}</h2>
                             <h3>Member Since:&nbsp;{formatDate(created_at)}</h3>
                             <h4>{playlists.length}&nbsp;{pluralize}</h4>
-                            {/* <h4>Num Followers</h4> */}
+                          
                         </div>
                     </div>
                     {showBody}

@@ -13,7 +13,7 @@ class SongSnippet extends React.Component {
         if (this.props.paused === true) {
             this.props.play(this.props.song)
             player.play();
-        } else if (this.props.paused === false && this.props.song !== this.props.currentSong){
+        } else if (this.props.paused === false && this.props.song.id !== this.props.currentSong.id){
             this.props.play(this.props.song)
             player.play();
         } else {

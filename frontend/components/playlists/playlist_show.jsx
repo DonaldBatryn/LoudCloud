@@ -46,7 +46,7 @@ class PlaylistShow extends React.Component{
         return (
             <div className="pl-show-main">
                 <div className="pl-show-info">
-                    <img className="pl-show-image" src={window.cloud}/>
+                    <img className="pl-show-image" src={this.props.playlist.image_url}/>
                     <div className="pl-show-text">
                         <h2>{this.props.playlist.title}</h2>
                         <h4><Link to={`/users/${playlist.user_id}`}>by&nbsp;&nbsp;{users[playlist.user_id].username}</Link></h4>
