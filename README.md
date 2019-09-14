@@ -24,7 +24,7 @@ The PostgreSQL database was seeded with music made **entirely by me!**
 ## Music Streaming while Navigating Site
 ---------
 - Song information and album artwork dynamically updated on the Playbar
-- Click a new song, or a new album cover
+- Click any album cover to play
 ---------------
 ![playbar_example](app/assets/images/playbarGif.gif)
 -----------------
