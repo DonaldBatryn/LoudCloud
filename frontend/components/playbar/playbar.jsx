@@ -1,26 +1,44 @@
 import React from 'react';
 import Player from './player'
-import Progress from './progress'
+import ProgressBar from './progress'
 
 
 class PlayBar extends React.Component {
     constructor(props){
         super(props)
-     
+        this.state = {
+            duration: "",
+            currentTime: 0
+        }
         this.handlePlay = this.handlePlay.bind(this)
     }
 
     handlePlay(){
-        let audioPlayer = document.getElementById("audio-player")
+        let audioPlayer = document.getElementById("audio-player");
+        // let playInterval;
         if (this.props.isPlaying === false && this.props.currentSong !== ""){
-            this.props.play(this.props.currentSong)
-            audioPlayer.setAttribute('src', this.props.currentSong.song_url)
-            audioPlayer.play();
+            if (this.props.paused){
+                audioPlayer.currentTime = this.state.currentTime
+                this.props.unpause();
+                this.setState({ duration: audioPlayer.duration})
+           
+                audioPlayer.play();
+            } else {
+                this.props.play(this.props.currentSong)
+                audioPlayer.setAttribute('src', this.props.currentSong.song_url)
+                this.setState({ duration: audioPlayer.duration })
+           
+                audioPlayer.play();
+            }
         } else if (this.props.isPlaying === false && this.props.currentSong === ""){
             this.props.play(this.props.randomSong)
             audioPlayer.setAttribute('src', this.props.randomSong.song_url)
+            this.setState({ duration: audioPlayer.duration })
+          
             audioPlayer.play();
         } else if (this.props.isPlaying === true) {
+       
+            this.setState({ currentTime: audioPlayer.currentTime })
             this.props.pause()
             audioPlayer.pause();
         } else {
@@ -29,7 +47,7 @@ class PlayBar extends React.Component {
     }
 
     render(){
-        let { currentSong } = this.props;
+        let { currentSong, duration } = this.props;
 
         let playPause;
         if (this.props.isPlaying === false){
@@ -57,8 +75,8 @@ class PlayBar extends React.Component {
                 </div>
             )
             previewImage = <img className="playbar-thumb" src={currentSong.image_url} />
-        } 
-        
+        }
+        let audioPlayer = document.getElementById("audio-player")
         return (
             <nav id="play-nav">
                 <div><button className="icon-rewind "><img className="controls" src={window.rewind} alt="rewind" /></button></div>
@@ -67,7 +85,8 @@ class PlayBar extends React.Component {
                 <div><button className="icon-shuffle "><img className="controls" src={window.shuffle} alt="shuffle" /></button></div>
                 <div><button className="icon-repeat "><img className="controls" src={window.repeat} alt="repeat" /></button></div>
                 <div className="progress-bar">
-                    <Player song={currentSong}/>
+                    <Player song={currentSong} duration={duration} />
+                    <ProgressBar song={audioPlayer} />
                 </div>
                 {previewImage}
                 {songInfo}

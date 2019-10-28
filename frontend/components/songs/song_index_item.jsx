@@ -7,7 +7,10 @@ import { play } from '../../actions/user_actions';
 class SongIndexItem extends React.Component {
     constructor(props){
         super(props);
-      
+        this.state = {
+            duration: "",
+            currentTime: ""
+        }
     }
 
     handlePlay() {
@@ -16,10 +19,13 @@ class SongIndexItem extends React.Component {
         
         if (this.props.isPaused === true) {
             this.props.unpause()
-            this.props.play(this.props.song)
+            // this.props.play(this.props.song)
+            player.currentTime = this.state.currentTime
             player.play();
         } else if (this.props.isPaused === false && this.props.song.id === this.props.currentSong.id) {
+            this.setState({ currentTime: player.currentTime })
             this.props.pause();
+            console.log(this.state.currentTime)
             player.pause()
         } else if (this.props.isPaused === false && this.props.song.id !== this.props.currentSong.id){
             this.props.unpause();

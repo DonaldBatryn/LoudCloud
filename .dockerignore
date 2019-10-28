@@ -1,0 +1,33 @@
+# for all code you usually don't want .git history in image, just the current commit you have checked out
+.git
+
+# you usually don't want dockerfile and compose files in the image either
+
+*docker-compose*
+
+# for Node.js apps, you want to build the node_modules in the image, and not copy from host
+node_modules
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+
+.byebug_history
+bundle.js
+bundle.js.map
+.DS_Store
+npm-debug.log
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

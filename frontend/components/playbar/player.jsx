@@ -6,16 +6,16 @@ class Player extends React.Component {
     }
 
     render(){
-        let { currentSong } = this.props;
+        let { currentSong, duration } = this.props;
         if (!(currentSong)){
             return (
                 <audio id="audio-player" src=""></audio>
             )
         }
         let player = <audio id="audio-player" src={currentSong.audioUrl}></audio>
-        debugger
+      
         return (
-            <div>{player}</div>
+            <div className="player-div">{player}</div>
         )
     }
 }

@@ -26,7 +26,7 @@ class ProgressBar extends React.Component {
 
     updateProgress(){
         if (this.props.song){
-            if (this.props.song.currentTime === this. props.song.duration){
+            if (this.props.song.currentTime === this.props.song.duration){
                 this.props.song.load();
                 this.setState({
                     progress: 0
