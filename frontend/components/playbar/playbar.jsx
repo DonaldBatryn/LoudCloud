@@ -77,6 +77,9 @@ class PlayBar extends React.Component {
             previewImage = <img className="playbar-thumb" src={currentSong.image_url} />
         }
         let audioPlayer = document.getElementById("audio-player")
+        let progBar = this.props.isLoggedIn ? (
+            <ProgressBar song={audioPlayer} />
+        ) : ""
         return (
             <nav id="play-nav">
                 <div><button className="icon-rewind "><img className="controls" src={window.rewind} alt="rewind" /></button></div>
@@ -86,7 +89,7 @@ class PlayBar extends React.Component {
                 <div><button className="icon-repeat "><img className="controls" src={window.repeat} alt="repeat" /></button></div>
                 <div className="progress-bar">
                     <Player song={currentSong} duration={duration} />
-                    <ProgressBar song={audioPlayer} />
+                    {progBar}
                 </div>
                 {previewImage}
                 {songInfo}

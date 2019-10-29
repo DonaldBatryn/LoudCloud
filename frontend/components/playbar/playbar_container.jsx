@@ -11,7 +11,8 @@ const msp = state => {
         isPlaying: !(state.ui.paused),
         paused: state.ui.paused,
         randomSong: state.entities.songs[randId],
-        duration: ""
+        duration: "",
+        isLoggedIn: !!state.session.id
     })
 }
 

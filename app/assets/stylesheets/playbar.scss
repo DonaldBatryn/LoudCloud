@@ -91,10 +91,10 @@
   transition: all 0.3s ease-in-out;
 }
 
-// .progress > .elapsed-time, .progress > .remaining-time {
-//   position: absolute;
-//   padding: 20px;
-// }
+.progress > .elapsed-time, .progress > .remaining-time {
+  position: absolute;
+  padding: 20px;
+}
 
 .progress > .elapsed-time {
   left: 0;

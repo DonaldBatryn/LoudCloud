@@ -23,9 +23,10 @@ class SongIndexItem extends React.Component {
             player.currentTime = this.state.currentTime
             player.play();
         } else if (this.props.isPaused === false && this.props.song.id === this.props.currentSong.id) {
+            console.log(player.currentTime)
             this.setState({ currentTime: player.currentTime })
             this.props.pause();
-            console.log(this.state.currentTime)
+            // console.log(this.state.currentTime)
             player.pause()
         } else if (this.props.isPaused === false && this.props.song.id !== this.props.currentSong.id){
             this.props.unpause();
