@@ -18,10 +18,10 @@
 [class*="icon-"]:hover{
     background-color: rgba(247, 166, 60, 0.8);
     border-radius: 17px;
-    // border: 1px solid #524848;
+
     padding: 5px;
     cursor: pointer;
-    // margin: 2px;
+
 }
 
 // player button sizing
@@ -97,14 +97,16 @@
 }
 
 .progress > .elapsed-time {
-  left: 0;
-//   color: #ff5700;
-//   color: orange;
+  left: -10px;
+  font-weight: 100;
+  font-family: "Interstate","Lucida Grande",Arial,sans-serif;
+
 }
 
 .progress > .remaining-time {
-//   color: orange;
-  right: 0;
+  right: -10px;
+  font-weight: 100;
+  font-family: "Interstate","Lucida Grande",Arial,sans-serif;
 }
 
 .progress:hover{
@@ -133,11 +135,11 @@
   position: absolute;
   height: .5px;
   border: 0.25px solid #ff5700;
-//   border: 0.25px solid orange;
+
 }
 
 .progress > .play-bar > .circle {
-//   display: none;
+  // display: none;
   position: absolute;
 
   height: 8px;

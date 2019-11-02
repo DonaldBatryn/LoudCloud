@@ -16,11 +16,17 @@ class ProgressBar extends React.Component {
 
     componentDidMount(){
         document.addEventListener("mousemove", e => {
-            this.dragProgress(e);
+            if (this.props.song.duration){
+                this.dragProgress(e);
+
+            }
         })
 
         document.addEventListener("mouseup", e => {
-            this.endDrag(e);
+            if (this.props.song.duration){
+                this.endDrag(e);
+
+            }
         })
     }
 

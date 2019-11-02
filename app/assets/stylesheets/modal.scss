@@ -9,7 +9,7 @@
 
 .modal-screen {
     position: fixed;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(230, 230, 230, 0.7);
     top: 0;
     bottom: 0;
     left: 0;
@@ -24,14 +24,14 @@
     top: 18%;
     left: 50%;
     margin-left: -199px;
-    width: 400px;
+    width: 500px;
     height: auto;
     padding: 20px;
     padding-top: 90px;
-    background: whitesmoke;
+    background: white;
     z-index: 3;
-    border-radius: 7px;
-    border: 2px solid whitesmoke;
+    // border-radius: 7px;
+    // border: 2px solid orange;
     
 }
 
@@ -48,18 +48,18 @@
     font-family: "Interstate","Lucida Grande",Arial,sans-serif;
     color: gray;
     padding-top: 15px;
-    width: 220px;
+    width: 320px;
 
 }
 
 #submit-container {
-    width: 350px;
+    width: 450px;
     padding: 35px 0 0 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     // flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .modal-close {
@@ -86,13 +86,16 @@ input:focus {
 input {
     font-family: "Interstate","Lucida Grande",Arial,sans-serif;
     font-size: 16px;
-    padding-left: 5px;
+    padding-left: 15px;
     text-decoration: none;
+    border: 0.5px solid lightgray;
+    
 }
 
 input.form {
     margin-top: 10px;
-    
+    width: 95%;
+    height: 45px;
 }
 
 div.errors {
@@ -110,36 +113,42 @@ div.errors {
 
 button.submit {
     color: whitesmoke;
-    background-color: #524848;;
-    width: 50%;
+    background-color: orange;
+    width: 40%;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: all 0.3s ease 0s;
     font-family: "Interstate","Lucida Grande",Arial,sans-serif;
 }
 
 button.submit:hover {
-    background-color: rgba(133, 122, 122, 0.5);
+    // background-color: rgba(133, 122, 122, 0.5);
+    box-shadow: -2px 1px 2px gray;
     
+}
+
+.splash-btn{
+    margin-top: 30px
 }
 
 input.submit {
     color: whitesmoke;
-    background-color: #524848;;
-    width: 50%;
+    background-color: orange;
+    width: 40%;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: all 0.3s ease 0s;
     font-family: "Interstate","Lucida Grande",Arial,sans-serif;
-    margin-bottom: 18px;
+    // margin-bottom: 18px;
 }
 
 input.submit:hover {
-    background-color: rgba(133, 122, 122, 0.5);
+    // background-color: rgba(133, 122, 122, 0.5);
+    box-shadow: -2px 1px 2px gray;
 }
 
 button.other-form {
-    border: 2px solid orange;
+    background-color: orange;
     font-family: "Interstate","Lucida Grande",Arial,sans-serif;
 }
 

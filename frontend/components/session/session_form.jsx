@@ -92,18 +92,27 @@ class SessionForm extends React.Component {
                 
                         <span className="modal-close js-modal-close" onClick={closeModal}>&times;</span>
 
-
-                        <label htmlFor="username">Username:</label>
-                            <input className="form" id="username" type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')} />
+                            <input className="form" 
+                                id="username" 
+                                type="text" 
+                                spellCheck="false" 
+                                value={this.state.username} 
+                                onChange={this.handleInput('username')}
+                                placeholder="Username" />
                         
-                      
-                        <label htmlFor="password">Password:</label>
-                            <input className="form" id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
+
+                            <input className="form" 
+                            id="password" 
+                            type="password" 
+                            spellCheck="false" 
+                            value={this.state.password} 
+                            onChange={this.handleInput('password')}
+                            placeholder="Password" />
                         
                         <div id="submit-container">
                             <input id="demo-submit"  className="submit" type="submit" value={type} />
                             <button className="submit" onClick={this.prettyDemoUser}>Continue as Guest</button><br/>
-                            {otherForm}
+                            {/* {otherForm} */}
 
                         </div>
                     </form>
@@ -122,15 +131,32 @@ class SessionForm extends React.Component {
                   
                         <span className="modal-close js-modal-close" onClick={closeModal}>&times;</span>
 
+                            <input className="form" 
+                                id="username" 
+                                type="text" 
+                                spellCheck="false" 
+                                value={this.state.username} 
+                                onChange={this.handleInput('username')}
+                                placeholder="Create a Username" />
+                        
+                        
+                        <input className="form" 
+                            id="email" 
+                            type="text" 
+                            spellCheck="false" 
+                            value={this.state.email} 
+                            onChange={this.handleInput('email')}
+                            placeholder="Enter your Email" />
+                        
 
-                        <label htmlFor="username">Username:</label>
-                            <input className="form" id="username" type="text" spellCheck="false" value={this.state.username} onChange={this.handleInput('username')}/>
-                        
-                        <label htmlFor="email">Email: </label>
-                        <input className="form" id="email" type="text" spellCheck="false" value={this.state.email} onChange={this.handleInput('email')} />
-                        
-                        <label htmlFor="password">Password:</label>
-                        <input className="form" id="password" type="password" spellCheck="false" value={this.state.password} onChange={this.handleInput('password')} />
+                        <input className="form" 
+                            id="password" 
+                            type="password" 
+                            spellCheck="false" 
+                            value={this.state.password} 
+                            onChange={this.handleInput('password')}
+                            placeholder="Set a Password" />
+
                         <div id="submit-container">
                             <input className="submit" type="submit" value={type}/>
                             {otherForm}

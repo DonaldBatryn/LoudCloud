@@ -8,9 +8,11 @@ class PlayBar extends React.Component {
         super(props)
         this.state = {
             duration: "",
-            currentTime: 0
+            currentTime: 0,
+            currentVol: 1
         }
-        this.handlePlay = this.handlePlay.bind(this)
+        this.handlePlay = this.handlePlay.bind(this);
+        this.handleMute = this.handleMute.bind(this);
     }
 
     handlePlay(){
@@ -43,6 +45,20 @@ class PlayBar extends React.Component {
             audioPlayer.pause();
         } else {
             return
+        }
+    }
+
+    handleMute() {
+        const muteImage = "https://musical-breakout-js.s3.us-east-2.amazonaws.com/mute.png"
+        const soundImage = "https://musical-breakout-js.s3.us-east-2.amazonaws.com/volume.png"
+        let audioPlayer = document.getElementById("audio-player");
+        let volButton = document.getElementById("mute-button")
+        if (audioPlayer.volume > 0) {
+            audioPlayer.volume = 0;
+            volButton.src = muteImage
+        } else {
+            audioPlayer.volume = this.state.currentVol;
+            volButton.src = soundImage
         }
     }
 
@@ -85,8 +101,8 @@ class PlayBar extends React.Component {
                 <div><button className="icon-rewind "><img className="controls" src={window.rewind} alt="rewind" /></button></div>
                 {playPause}
                 <div><button className="icon-forward "><img className="controls" src={window.forward} alt="forward" /></button></div>
-                <div><button className="icon-shuffle "><img className="controls" src={window.shuffle} alt="shuffle" /></button></div>
                 <div><button className="icon-repeat "><img className="controls" src={window.repeat} alt="repeat" /></button></div>
+                <div><button onClick={this.handleMute} className="icon-shuffle "><img id="mute-button" className="controls" src="https://musical-breakout-js.s3.us-east-2.amazonaws.com/volume.png" alt="mute" /></button></div>
                 <div className="progress-bar">
                     <Player song={currentSong} duration={duration} />
                     {progBar}
