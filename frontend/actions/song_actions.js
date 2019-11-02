@@ -10,6 +10,16 @@ export const RECEIVE_UPLOAD_ERRORS = "RECEIVE_UPLOAD_ERRORS"
 export const CLEAR_UPLOAD_ERRORS = "CLEAR_UPLOAD_ERRORS"
 export const RECEIVE_ROUTE_ERRORS = "RECEIVE_ROUTE_ERRORS"
 export const CLEAR_ROUTE_ERRORS = "CLEAR_ROUTE_ERRORS"
+export const LOOP_ON = 'LOOP_ON';
+export const LOOP_OFF = 'LOOP_OFF'
+
+const loopOn = () => ({
+    type: LOOP_ON
+})
+
+const loopOff = () => ({
+    type: LOOP_OFF
+})
 
 const pauseSong = () => ({
     type: PAUSE_SONG
@@ -101,4 +111,12 @@ export const clearErrs = () => dispatch => (
 
 export const clearRouteErrs = () => dispatch => (
     dispatch(clearRouteErrors())
+)
+
+export const setLoopOn = () => dispatch => (
+    dispatch(loopOn())
+)
+
+export const setLoopOff = () => dispatch => (
+    dispatch(loopOff())
 )

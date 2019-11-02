@@ -17,11 +17,19 @@
 // player button animation
 [class*="icon-"]:hover{
     background-color: rgba(247, 166, 60, 0.8);
-    border-radius: 17px;
+    border-radius: 2px;
 
-    padding: 5px;
+    padding-top: 6px;
     cursor: pointer;
 
+}
+
+.repeat{
+    background-color: rgba(247, 166, 60, 0.8);
+    border-radius: 2px;
+
+    padding-top: 6px;
+    cursor: pointer;
 }
 
 // player button sizing
@@ -158,4 +166,102 @@
   background: transparent;
   width: 100%;
   height: 100%;
+}
+
+// VOLUME BAR 
+
+.volume-control {
+  position: relative;
+  font-size: 10pt;
+  display: flex;
+  align-items: center;
+}
+
+.volume-control .icon {
+  display: inline-block;
+  background-color: transparent;
+  background-size: 25px 25px;
+
+  width: 25px;
+  padding-top: 22px;
+  height: 0px;
+  margin: 10px;
+  border: none;
+  overflow: hidden;
+}
+
+.volume-control > .volume-slider {
+  visibility: hidden;
+  width: 30px;
+  height: 120px;
+  position: absolute;
+  z-index: 2;
+  left: 5px;
+  bottom: 39px;
+  background: rgb(240, 240, 240);
+  border: 1px solid rgb(200, 200, 200);
+
+  display: flex;
+  justify-content: center;
+}
+
+.volume-control > .volume-slider::before, .volume-control > .volume-slider::after{
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-style: solid;
+}
+
+.volume-control > .volume-slider::before {
+  margin-left: -7px;
+  border-width: 7px;
+  border-color: rgb(200, 200, 200) transparent transparent transparent;
+}
+
+.volume-control > .volume-slider::after {
+  margin-left: -6px;
+  border-width: 6px;
+  border-color: rgb(240, 240, 240) transparent transparent transparent;
+}
+
+.volume-control > .volume-slider.show {
+  visibility: visible;
+}
+
+.volume-control:hover > .volume-slider {
+  visibility: visible;
+}
+
+.volume-slider > .volume-full-bar {
+  height: 100px;
+  width: 0px;
+  margin-top: 10px;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+.volume-slider > .volume-current-bar {
+  position: absolute;
+  width: 0px;
+  border: 1px solid orange;
+}
+
+.volume-slider > .volume-circle {
+  position: absolute;
+
+  height: 8px;
+  width: 8px;
+  background-color: orange;
+  border-radius: 50%;
+}
+
+.volume-slider > .volume-bar-seek {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.volume-slider > .volume-bar-seek:hover {
+  cursor: pointer;
 }

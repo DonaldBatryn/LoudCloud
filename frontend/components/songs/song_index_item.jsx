@@ -16,7 +16,7 @@ class SongIndexItem extends React.Component {
     handlePlay() {
         let player = document.getElementById("audio-player")
         player.setAttribute('src', this.props.song.song_url)
-        
+        player.setAttribute('loop', this.props.loopOn )
         if (this.props.isPaused === true) {
             this.props.unpause()
             // this.props.play(this.props.song)

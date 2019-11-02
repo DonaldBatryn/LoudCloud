@@ -1,7 +1,7 @@
 import React from 'react';
-import Player from './player'
-import ProgressBar from './progress'
-
+import Player from './player';
+import ProgressBar from './progress';
+import Volume from './volume';
 
 class PlayBar extends React.Component {
     constructor(props){
@@ -9,32 +9,36 @@ class PlayBar extends React.Component {
         this.state = {
             duration: "",
             currentTime: 0,
-            currentVol: 1
+            currentVol: 1,
+            loopOn: false
         }
         this.handlePlay = this.handlePlay.bind(this);
-        this.handleMute = this.handleMute.bind(this);
+        this.toggleLoop = this.toggleLoop.bind(this);
     }
 
     handlePlay(){
         let audioPlayer = document.getElementById("audio-player");
-        // let playInterval;
+
         if (this.props.isPlaying === false && this.props.currentSong !== ""){
             if (this.props.paused){
                 audioPlayer.currentTime = this.state.currentTime
                 this.props.unpause();
                 this.setState({ duration: audioPlayer.duration})
+                // audioPlayer.setAttribute('loop', this.props.loopOn)
            
                 audioPlayer.play();
             } else {
                 this.props.play(this.props.currentSong)
                 audioPlayer.setAttribute('src', this.props.currentSong.song_url)
+                // audioPlayer.setAttribute('loop', this.props.loopOn)
                 this.setState({ duration: audioPlayer.duration })
-           
+                
                 audioPlayer.play();
             }
         } else if (this.props.isPlaying === false && this.props.currentSong === ""){
             this.props.play(this.props.randomSong)
             audioPlayer.setAttribute('src', this.props.randomSong.song_url)
+            // audioPlayer.setAttribute('loop', this.props.loopOn)
             this.setState({ duration: audioPlayer.duration })
           
             audioPlayer.play();
@@ -48,22 +52,25 @@ class PlayBar extends React.Component {
         }
     }
 
-    handleMute() {
-        const muteImage = "https://musical-breakout-js.s3.us-east-2.amazonaws.com/mute.png"
-        const soundImage = "https://musical-breakout-js.s3.us-east-2.amazonaws.com/volume.png"
+    toggleLoop() {
+        let repeatButton = document.getElementById("repeat");
         let audioPlayer = document.getElementById("audio-player");
-        let volButton = document.getElementById("mute-button")
-        if (audioPlayer.volume > 0) {
-            audioPlayer.volume = 0;
-            volButton.src = muteImage
+        if (audioPlayer.getAttribute('loop') === 'true') {
+            // this.setState({loopOn: 'false'})
+            this.props.setLoopOff()
+            audioPlayer.removeAttribute('loop', 'false');
+            repeatButton.classList.remove('repeat')
         } else {
-            audioPlayer.volume = this.state.currentVol;
-            volButton.src = soundImage
+            // this.setState({loopOn: 'true'})
+            console.log("hit setloop On")
+            this.props.setLoopOn()
+            audioPlayer.setAttribute('loop', 'true')
+            repeatButton.classList.add('repeat')
         }
     }
 
     render(){
-        let { currentSong, duration } = this.props;
+        let { currentSong, duration, pause } = this.props;
 
         let playPause;
         if (this.props.isPlaying === false){
@@ -94,15 +101,18 @@ class PlayBar extends React.Component {
         }
         let audioPlayer = document.getElementById("audio-player")
         let progBar = this.props.isLoggedIn ? (
-            <ProgressBar song={audioPlayer} />
+            <ProgressBar song={audioPlayer} pause={pause} />
+        ) : ""
+        let volBar = this.props.isLoggedIn ? (
+            <Volume song={audioPlayer} />
         ) : ""
         return (
             <nav id="play-nav">
                 <div><button className="icon-rewind "><img className="controls" src={window.rewind} alt="rewind" /></button></div>
                 {playPause}
                 <div><button className="icon-forward "><img className="controls" src={window.forward} alt="forward" /></button></div>
-                <div><button className="icon-repeat "><img className="controls" src={window.repeat} alt="repeat" /></button></div>
-                <div><button onClick={this.handleMute} className="icon-shuffle "><img id="mute-button" className="controls" src="https://musical-breakout-js.s3.us-east-2.amazonaws.com/volume.png" alt="mute" /></button></div>
+                <div><button id="repeat" onClick={this.toggleLoop} className="icon-repeat "><img className="controls" src={window.repeat} alt="repeat" /></button></div>
+                {volBar}
                 <div className="progress-bar">
                     <Player song={currentSong} duration={duration} />
                     {progBar}

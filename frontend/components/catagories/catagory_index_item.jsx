@@ -12,7 +12,8 @@ class CatagoryIndexItem extends React.Component {
             isPaused, 
             currentSong, 
             catagory, 
-            description 
+            description,
+            loopOn 
         } = this.props;
 
 
@@ -30,6 +31,7 @@ class CatagoryIndexItem extends React.Component {
                     unpause={unpause} 
                     isPaused={isPaused} 
                     currentSong={currentSong} 
+                    loopOn={loopOn}
                 />
 
                 <SongIndexItem
@@ -39,6 +41,7 @@ class CatagoryIndexItem extends React.Component {
                     unpause={unpause}
                     isPaused={isPaused}
                     currentSong={currentSong}
+                    loopOn={loopOn}
                 />
 
                 <SongIndexItem
@@ -48,6 +51,7 @@ class CatagoryIndexItem extends React.Component {
                     unpause={unpause}
                     isPaused={isPaused}
                     currentSong={currentSong}
+                    loopOn={loopOn}
                 />
 
                 <SongIndexItem
@@ -57,6 +61,7 @@ class CatagoryIndexItem extends React.Component {
                     unpause={unpause}
                     isPaused={isPaused}
                     currentSong={currentSong}
+                    loopOn={loopOn}
                 />
 
               

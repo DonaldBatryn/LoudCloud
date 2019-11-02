@@ -10,7 +10,7 @@ class CatagoryIndex extends React.Component {
     }
 
     render(){
-        let { songs, play, pause, unpause, isPaused, currentSong } = this.props;
+        let { songs, play, pause, unpause, isPaused, currentSong, loopOn } = this.props;
 
         let group1 = songs.slice(0, 4)
         let group2 = songs.slice(4, 8)
@@ -28,6 +28,7 @@ class CatagoryIndex extends React.Component {
                 unpause={unpause} 
                 isPaused={isPaused} 
                 currentSong={currentSong}
+                loopOn={loopOn}
             />
 
             <CatagoryIndexItem 
@@ -39,6 +40,7 @@ class CatagoryIndex extends React.Component {
                 unpause={unpause} 
                 isPaused={isPaused} 
                 currentSong={currentSong}
+                loopOn={loopOn}
             />
 
             <CatagoryIndexItem 
@@ -50,6 +52,7 @@ class CatagoryIndex extends React.Component {
                 unpause={unpause} 
                 isPaused={isPaused} 
                 currentSong={currentSong}
+                loopOn={loopOn}
             />
 
             <CatagoryIndexItem 
@@ -61,6 +64,7 @@ class CatagoryIndex extends React.Component {
                 unpause={unpause} 
                 isPaused={isPaused} 
                 currentSong={currentSong}
+                loopOn={loopOn}
             />
         </div>
         )
