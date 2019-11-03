@@ -37,7 +37,7 @@ The PostgreSQL database was seeded with music made **entirely by me!**
 -------------------
 ## Music Player
 -----------
-- I used the html `<audio>` tag along with Redux state to handle playing music
+- I designed a custom audio player with volume, progress and loop controls using the html `<audio>` tag and the Redux cycle.
   
 
 ``` javascript
