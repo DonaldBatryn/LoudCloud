@@ -1,5 +1,5 @@
 # LoudCloud
-## React - Redux - JavaScript - Ruby - Rails - AWS
+## [React](https://reactjs.org/) - [Redux](https://redux.js.org/) - [JavaScript](https://www.javascript.com/) - [Ruby](https://www.ruby-lang.org/en/) - [Rails](https://rubyonrails.org/) - [AWS](https://aws.amazon.com/) - [PostgresQL](https://www.postgresql.org/)
 
 ![LoudCloud logo](https://donnie-loudcloud-prod.s3.us-east-2.amazonaws.com/cloudSmallLogo.png)
 
