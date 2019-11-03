@@ -1,5 +1,5 @@
 # LoudCloud
-## README
+## React - Redux - JavaScript - Ruby - Rails - AWS
 
 ![LoudCloud logo](https://donnie-loudcloud-prod.s3.us-east-2.amazonaws.com/cloudSmallLogo.png)
 
@@ -19,19 +19,21 @@ The PostgreSQL database was seeded with music made **entirely by me!**
  - "Guest Login" with an animated effect
 --------------
 
-![login_example](app/assets/images/loginGif.gif)
+![login_example](app/assets/images/NewLoginGif.gif)
 -------------
 ## Music Streaming while Navigating Site
 ---------
 - Song information and album artwork dynamically updated on the Playbar
 - Click any album cover to play
 ---------------
-![playbar_example](app/assets/images/playbarGif.gif)
+![playbar_example](app/assets/images/SiteDemoGif.gif)
 -----------------
 ## Playlist Creation
 --------
 - Create, edit, and rock out to your own playlists
 - Hear other user's playlists
+-------------------
+![playlist_example](app/assets/images/PlaylistDemoGif.gif)
 -------------------
 ## Music Player
 -----------
