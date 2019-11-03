@@ -4,11 +4,11 @@
 ![LoudCloud logo](https://donnie-loudcloud-prod.s3.us-east-2.amazonaws.com/cloudSmallLogo.png)
 
 
-Welcome to `LoudCloud`, my take on the popular music sharing website **SoundCloud**.
+### Welcome to `LoudCloud`, my take on the popular music sharing website **SoundCloud**.
 
-https://the-loudcloud.herokuapp.com/
+[LoudCloud live](https://the-loudcloud.herokuapp.com/)
 
-This is my first full-stack application, utilizing a `Rails` backend and a `React` frontend 
+This application utilizes a `Rails` backend and a `React` frontend 
 
 The PostgreSQL database was seeded with music made **entirely by me!**
 
