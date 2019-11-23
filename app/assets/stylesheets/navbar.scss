@@ -75,6 +75,7 @@ img.logo{
     width: 90px;
     color: bisque;
     padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 // cloud logo animation
@@ -83,16 +84,25 @@ img.logo:hover {
     border: 1px solid #524848;
     padding: 10px 15px;
     border-radius: 50px;
-    transition: all 0.3s ease 0s;
 }
 
 // search bar animation
-header p.nav-links:hover {
+
+input.search-bar{
+    transition: all 0.3s ease-in-out;
+}
+input.search-bar:hover {
     background-color: #eebd1e;
     border: 1px solid #524848;
     padding: 10px 15px;
     border-radius: 50px;
-    transition: all 0.3s ease 0s;
+    
+}
+input.search-bar:focus{
+    background-color: #eebd1e;
+    border: 1px solid #524848;
+    padding: 10px 15px;
+    border-radius: 50px;
 }
 
 

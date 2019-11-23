@@ -33,12 +33,12 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, this.state)
    
         this.props.processForm(user).then(() => {
-        if (this.props.session.length > 0){
-            return
-           
-        }else {
-            this.props.closeModal()
-        }
+            if (this.props.session.length > 0){
+                return
+            
+            }else {
+                this.props.closeModal()
+            }
         })
     }
 

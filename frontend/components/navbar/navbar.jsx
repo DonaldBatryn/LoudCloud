@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Search from '../search/search';
 import { openModal } from '../../actions/modal_actions'
 
 export default ({ currentUser, logout, openModal }) => {
@@ -24,10 +25,11 @@ export default ({ currentUser, logout, openModal }) => {
             <p><Link to="/home"><img className="logo" src={window.cloud} alt="LoudCloud" /></Link></p>
             <div className="nav-links"><Link to="/songs">Library</Link></div>
             <div className="nav-links"><Link to="/playlists">Playlists</Link></div>
-            <p className="nav-links">
-                <input className="search-bar" type="text" spellCheck="false" ></input>
-                <button className="search-button">Search LoudCloud</button>
-            </p>
+            <div className="nav-links">
+                    <input className="search-bar" type="text" placeholder="Search LoudCloud" spellCheck="false" ></input>
+                
+            </div>
+            {/* <Search /> */}
             <div>{display.link1}</div>
             <div>{display.link2}</div>
         </header>
